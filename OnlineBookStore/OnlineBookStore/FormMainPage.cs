@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OnlineBookStore
@@ -13,47 +6,54 @@ namespace OnlineBookStore
     public partial class FormMainPage : Form
     {
         private static FormMainPage mainPage;
-        UserControlBooks userControlBooks;
-        UserControlMusicCDs userControlMusicCDs;
-        UserControlMagazines UserControlMagazines;
-        UserControlShoppingCart userControlShoppingCart;
-        
-        UserControlProductDetails userControlProductDetails;
-        UserControlMusicCDDetail userControlMusicCDDetail;
-        UserControlMagazineDetails userControlMagazineDetails;
-        UserControlChangeInformations userControlChangeInformations;
-        UserControlMyPage userControlMyPage;
+
+        private UserControlBooks userControlBooks;
+        private UserControlMusicCDs userControlMusicCDs;
+        private UserControlMagazines UserControlMagazines;
+        private UserControlShoppingCart userControlShoppingCart;
+
+        private UserControlProductDetails userControlProductDetails;
+        private UserControlMusicCDDetail userControlMusicCDDetail;
+        private UserControlMagazineDetails userControlMagazineDetails;
+        private UserControlChangeInformations userControlChangeInformations;
+        private UserControlMyPage userControlMyPage;
 
         public UserControlBooks _UserControlBooks
         {
             get => userControlBooks;
             set => userControlBooks = value;
         }
+
         public UserControlMusicCDs _UserControlMusicCDs
         {
             get => userControlMusicCDs;
             set => userControlMusicCDs = value;
         }
+
         public UserControlMagazines _UserControlMagazines
         {
             get => UserControlMagazines;
             set => UserControlMagazines = value;
         }
+
         public UserControlShoppingCart _UserControlShoppingCart
         {
             get => userControlShoppingCart;
             set => userControlShoppingCart = value;
         }
+
         public UserControlMyPage _UserControlMyPage
         {
             get => userControlMyPage;
             set => userControlMyPage = value;
         }
+
         public UserControlChangeInformations _UserControlChangeInformations
         {
             get => userControlChangeInformations;
             set => userControlChangeInformations = value;
         }
+
         public static FormMainPage Instance()
         {
             if (mainPage == null)
@@ -62,6 +62,7 @@ namespace OnlineBookStore
             }
             return mainPage;
         }
+
         public FormMainPage()
         {
             InitializeComponent();
@@ -93,6 +94,9 @@ namespace OnlineBookStore
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
 
+            userControlBooks.DeleteBook();
+            userControlBooks.CreateBook();
+
             this.panelProductDisplay.Controls.Add(userControlBooks);
         }
 
@@ -106,6 +110,9 @@ namespace OnlineBookStore
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
+
+            userControlMusicCDs.DeleteMusicCD();
+            userControlMusicCDs.CreateMusicCD();
 
             this.panelProductDisplay.Controls.Add(userControlMusicCDs);
         }
@@ -121,6 +128,8 @@ namespace OnlineBookStore
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
 
+            UserControlMagazines.DeleteMagazine();
+            UserControlMagazines.CreateMagazine();
 
             this.panelProductDisplay.Controls.Add(UserControlMagazines);
         }
@@ -138,6 +147,21 @@ namespace OnlineBookStore
 
             userControlMyPage.SetLabelMyPage();
             this.panelProductDisplay.Controls.Add(userControlMyPage);
+        }
+
+        private void btnShoppingCart_Click(object sender, EventArgs e)
+        {
+            UserControlMagazines.Visible = false;
+            userControlMusicCDs.Visible = false;
+            userControlBooks.Visible = false;
+            userControlProductDetails.Visible = false;
+            userControlMusicCDDetail.Visible = false;
+            userControlMagazineDetails.Visible = false;
+            userControlMyPage.Visible = false;
+
+            userControlShoppingCart.Visible = true;
+            userControlShoppingCart.ListCart();
+            this.panelProductDisplay.Controls.Add(userControlShoppingCart);
         }
     }
 }

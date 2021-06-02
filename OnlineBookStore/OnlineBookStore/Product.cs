@@ -1,24 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineBookStore
+﻿namespace OnlineBookStore
 {
     public abstract class Product
     {
-        string productName;
-        static int productId;
-        int productPrice;
+        private string productName;
+        private static int productId;
+        private string productPrice;
 
         public Product()
         {
-
+        }
+        public virtual string ProductName
+        {
+            get => productName;
+            set => productName = value;
+        }
+        public virtual string ProductPrice
+        {
+            get => productPrice;
+            set => productName = value;
         }
         public void PrintProperties()
         {
-
         }
     }
 }

@@ -1,25 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OnlineBookStore
 {
     public partial class UserControlMyPage : UserControl
     {
-        Customer customer = Customer.CreateCustomer();
-        UserControlProductDetails userControlProductDetails = UserControlProductDetails.CreateProductDetails();
-        UserControlMusicCDDetail userControlMusicCDDetail = UserControlMusicCDDetail.CreateMusicCDDeatils();
-        UserControlMagazineDetails userControlMagazineDetails = UserControlMagazineDetails.CreateMagazineDetails();
+        private Customer customer = Customer.CreateCustomer();
+        private UserControlProductDetails userControlProductDetails = UserControlProductDetails.CreateProductDetails();
+        private UserControlMusicCDDetail userControlMusicCDDetail = UserControlMusicCDDetail.CreateMusicCDDeatils();
+        private UserControlMagazineDetails userControlMagazineDetails = UserControlMagazineDetails.CreateMagazineDetails();
+
         public UserControlMyPage()
         {
             InitializeComponent();
         }
+
         public void SetLabelMyPage()
         {
             lblName.Text = customer.Name;

@@ -1,50 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineBookStore
+﻿namespace OnlineBookStore
 {
     public enum typeCD { Rock, Classical, Pop, Country, Jazz, Rap, Punk, Metal }
-    public class MusicCD : Product 
-    {
-        string name, singer;
-        static int ID;
-        string price;
 
-        typeCD typecd;
+    public class MusicCD : Product
+    {
+        private string productName, productPrice;
+        private static int ID;
+        private string singer;
+
+        private typeCD typecd;
 
         public typeCD Type
         {
             get => typecd;
             set => typecd = value;
         }
+
         public MusicCD()
         {
+        }
 
-        }
-        public string Name
+        public override string ProductName
         {
-            get => name;
-            set => name = value;
+            get => productName;
+            set => productName = value;
         }
+
         public string Singer
         {
             get => singer;
             set => singer = value;
         }
+
         public int MusicCDID
         {
             get => ID;
             set => ID = value;
         }
-        public string Price
+
+        public override string ProductPrice
         {
-            get => price;
-            set => price = value;
+            get => productPrice;
+            set => productPrice = value;
         }
-
-
     }
 }

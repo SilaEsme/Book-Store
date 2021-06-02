@@ -1,43 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace OnlineBookStore
 {
-    class ShoppingCart
+    internal class ShoppingCart
     {
-        Customer customer;
-        List<ItemToPurchase> list;
-        enum PaymentType {cash,CreditCard}
+        private Customer customer = Customer.CreateCustomer();
+        private List<ItemToPurchase> list = new List<ItemToPurchase>();
 
-        public ShoppingCart() { }
+        private enum PaymentType
+        { cash, CreditCard }
 
+        public ShoppingCart()
+        {
+        }
+        public List<ItemToPurchase> List
+        {
+            get => list;
+        }
         public void AddProduct(ItemToPurchase item)
         {
-
+            list.Add(item);
         }
 
         public void RemoveProduct(ItemToPurchase item)
         {
-
+            list.Remove(item);
         }
+
         public void PlaceOrder()
         {
-
         }
+
         public void CancelOrder()
         {
-
         }
+
         public void SendInvoiceBySMS()
         {
-
         }
+
         public void SendInvoiceByEMail()
         {
-
         }
     }
 }

@@ -1,18 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineBookStore
+﻿namespace OnlineBookStore
 {
-    class ItemToPurchase
+    public class ItemToPurchase
     {
-        Product product;
-        int quantity;
+        private Product product;
+        private string quantity;
 
-        public ItemToPurchase() { }
-        public int Quantity
+        public ItemToPurchase()
+        {
+        }
+
+        public Product Product
+        {
+            get => product;
+            set => product = value;
+        }
+        public string Quantity
         {
             get => quantity;
             set => quantity = value;

@@ -1,65 +1,68 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineBookStore
+﻿namespace OnlineBookStore
 {
-    public enum _type { Fiction, Classic, Story, TurkishClassic, Education }
-    public class Book : Product 
+    public enum _type { Fiction, Classic, Story, TurkishClassic, Education, x }
+
+    public class Book : Product
     {
-        string name, ISBN, author, publisher;
-        string page, price, cover;
-        static int ID;
+        private string productName, productPrice;
+        private string ISBN, author, publisher;
+        private string page, cover;
+        private static int ID;
 
-        _type type;
+        private _type type;
 
-        
         public Book()
         {
-
         }
+
         public string Page
         {
             get => page;
             set => page = value;
         }
-        public string Price
+
+        public override string ProductPrice
         {
-            get => price;
-            set => price = value;
+            get => productPrice;
+            set => productPrice = value;
         }
+
         public int BookID
         {
             get => ID;
             set => ID = value;
         }
-        public string Name
+
+        public override string ProductName
         {
-            get => name;
-            set => name = value;
+            get => productName;
+            set => productName = value;
         }
+
         public string BookISBN
         {
             get => ISBN;
             set => ISBN = value;
         }
+
         public string Author
         {
             get => author;
             set => author = value;
         }
+
         public string Publisher
         {
             get => publisher;
             set => publisher = value;
         }
+
         public string Cover
         {
             get => cover;
             set => cover = value;
         }
+
         public _type Type
         {
             get => type;

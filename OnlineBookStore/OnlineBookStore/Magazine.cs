@@ -1,43 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineBookStore
+﻿namespace OnlineBookStore
 {
-    public enum typeMagazine {Culture,Technology,Science,Geography,Caricature,Kids,Society,Art,Entertainment,Other }
+    public enum typeMagazine { Culture, Technology, Science, Geography, Caricature, Kids, Society, Art, Entertainment, Other }
 
     public class Magazine : Product
     {
-        string name, issue;
-        string price;
-        typeMagazine TypeMagazine;
+        private string productName, productPrice;
+        private string issue;
+        private typeMagazine TypeMagazine;
 
         public typeMagazine _TypeMagazine
         {
             get => TypeMagazine;
             set => TypeMagazine = value;
         }
+
         public Magazine()
         {
+        }
 
-        }
-        public string Name
+        public override string ProductName
         {
-            get => name;
-            set => name = value;
+            get => productName;
+            set => productName = value;
         }
+
         public string Issue
         {
             get => issue;
             set => issue = value;
         }
-       
-        public string Price
+
+        public override string ProductPrice
         {
-            get => price;
-            set => price = value;
+            get => productPrice;
+            set => productPrice = value;
         }
     }
 }

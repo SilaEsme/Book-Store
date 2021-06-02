@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace OnlineBookStore
 {
     public partial class FormLogin : Form
     {
-        Customer customer = Customer.CreateCustomer();
-        FormMainPage main;
+        private Customer customer = Customer.CreateCustomer();
+        private FormMainPage main;
+
         public FormLogin()
         {
             InitializeComponent();
@@ -38,7 +32,6 @@ namespace OnlineBookStore
             {
                 if (dr.GetString(4) == txtUsername.Text)
                 {
-
                     if (dr.GetString(5) == sifre) //hashli
                     {
                         customer.Name = dr.GetString(0);
@@ -47,10 +40,10 @@ namespace OnlineBookStore
                         customer.Email = dr.GetString(3);
                         customer.userInfo.Username = dr.GetString(4);
                         customer.userInfo.Password = dr.GetString(5);
-                      
+
                         flag = true;
                         break;
-                    }                
+                    }
                 }
             }
             Database.CreateSingle().Sqlconnection.Close();

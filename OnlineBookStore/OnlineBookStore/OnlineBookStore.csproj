@@ -87,6 +87,12 @@
     <Compile Include="UserControlBook.Designer.cs">
       <DependentUpon>UserControlBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlProductDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlProductDetails.Designer.cs">
+      <DependentUpon>UserControlProductDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBooks.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,12 +147,6 @@
     <Compile Include="UserControlMyPage.Designer.cs">
       <DependentUpon>UserControlMyPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlProductDetails.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlProductDetails.Designer.cs">
-      <DependentUpon>UserControlProductDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControlShoppingCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +185,9 @@
     <EmbeddedResource Include="UserControlBook.resx">
       <DependentUpon>UserControlBook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlProductDetails.resx">
+      <DependentUpon>UserControlProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlBooks.resx">
       <DependentUpon>UserControlBooks.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,9 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlMyPage.resx">
       <DependentUpon>UserControlMyPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlProductDetails.resx">
-      <DependentUpon>UserControlProductDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlShoppingCart.resx">
       <DependentUpon>UserControlShoppingCart.cs</DependentUpon>

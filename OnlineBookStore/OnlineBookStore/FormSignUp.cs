@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+
 namespace OnlineBookStore
 {
     public partial class FormSignUp : Form
@@ -18,8 +12,6 @@ namespace OnlineBookStore
         {
             InitializeComponent();
         }
-
-     
 
         private void btn_signup_Click(object sender, EventArgs e)
         {
@@ -34,7 +26,7 @@ namespace OnlineBookStore
             Database.CreateSingle().Sqlconnection.Open();
             SqlDataReader dr = command2.ExecuteReader();
 
-            if (txtPassword.Text != "" && txtUsername.Text != "" && txtAddress.Text != "" && 
+            if (txtPassword.Text != "" && txtUsername.Text != "" && txtAddress.Text != "" &&
                 txtName.Text != "" && txteMail.Text != "" && txtSurname.Text != "")
             {
                 if (txtPassword.Text == txtConfirmPassword.Text)
@@ -77,7 +69,6 @@ namespace OnlineBookStore
             {
                 MessageBox.Show("Please fill all the blanks!", "Invalid");
             }
-
         }
 
         private void pictureBox_exit_Click(object sender, EventArgs e)
