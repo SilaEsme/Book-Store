@@ -249,5 +249,29 @@
   <ItemGroup>
     <None Include="Resources\Subscription-Books-talk-bws.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-book-shelf-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-book-shelf-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-music-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-comics-magazine-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-girl-with-glasses-shopping-cart-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-female-profile-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-page-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-star-of-bethlehem-64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

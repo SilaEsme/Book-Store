@@ -34,15 +34,17 @@ namespace OnlineBookStore
             this.lblEMailH = new System.Windows.Forms.Label();
             this.lblSurnameH = new System.Windows.Forms.Label();
             this.lblNameH = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBoxCustomer = new System.Windows.Forms.PictureBox();
+            this.btnUpdateImage = new System.Windows.Forms.Button();
             this.btnUpdateInfo = new System.Windows.Forms.Button();
             this.txtname = new System.Windows.Forms.TextBox();
             this.txtsurname = new System.Windows.Forms.TextBox();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtusername = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnSave = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsernameH
@@ -95,22 +97,24 @@ namespace OnlineBookStore
             this.lblNameH.TabIndex = 14;
             this.lblNameH.Text = "Name:";
             // 
-            // pictureBox1
+            // pictureBoxCustomer
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(69, 107);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(267, 284);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxCustomer.Location = new System.Drawing.Point(69, 107);
+            this.pictureBoxCustomer.Name = "pictureBoxCustomer";
+            this.pictureBoxCustomer.Size = new System.Drawing.Size(267, 284);
+            this.pictureBoxCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCustomer.TabIndex = 13;
+            this.pictureBoxCustomer.TabStop = false;
             // 
-            // button1
+            // btnUpdateImage
             // 
-            this.button1.Location = new System.Drawing.Point(117, 425);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 54);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Update Image";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUpdateImage.Location = new System.Drawing.Point(105, 425);
+            this.btnUpdateImage.Name = "btnUpdateImage";
+            this.btnUpdateImage.Size = new System.Drawing.Size(194, 54);
+            this.btnUpdateImage.TabIndex = 25;
+            this.btnUpdateImage.Text = "Update Image";
+            this.btnUpdateImage.UseVisualStyleBackColor = true;
+            this.btnUpdateImage.Click += new System.EventHandler(this.btnUpdateImage_Click);
             // 
             // btnUpdateInfo
             // 
@@ -166,26 +170,41 @@ namespace OnlineBookStore
             this.txtusername.TabIndex = 31;
             this.txtusername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(105, 485);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(194, 54);
+            this.btnSave.TabIndex = 32;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // UserControlChangeInformations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.txtaddress);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.txtsurname);
             this.Controls.Add(this.txtname);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUpdateImage);
             this.Controls.Add(this.btnUpdateInfo);
             this.Controls.Add(this.lblUsernameH);
             this.Controls.Add(this.lblAddressH);
             this.Controls.Add(this.lblEMailH);
             this.Controls.Add(this.lblSurnameH);
             this.Controls.Add(this.lblNameH);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxCustomer);
             this.Name = "UserControlChangeInformations";
             this.Size = new System.Drawing.Size(893, 580);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,13 +216,15 @@ namespace OnlineBookStore
         private System.Windows.Forms.Label lblEMailH;
         private System.Windows.Forms.Label lblSurnameH;
         private System.Windows.Forms.Label lblNameH;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBoxCustomer;
+        private System.Windows.Forms.Button btnUpdateImage;
         private System.Windows.Forms.Button btnUpdateInfo;
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.TextBox txtsurname;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.TextBox txtaddress;
         private System.Windows.Forms.TextBox txtusername;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnSave;
     }
 }

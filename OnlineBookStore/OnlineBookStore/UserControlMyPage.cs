@@ -36,6 +36,7 @@ namespace OnlineBookStore
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
 
+            FormMainPage.Instance()._UserControlChangeInformations.Visible = true;
             FormMainPage.Instance()._UserControlChangeInformations.SetTextBoxInfo();
             FormMainPage.Instance().panelProductDisplay.Controls.Add(FormMainPage.Instance()._UserControlChangeInformations);
         }

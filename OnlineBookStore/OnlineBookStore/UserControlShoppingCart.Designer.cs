@@ -41,18 +41,20 @@ namespace OnlineBookStore
             // flowLayoutPanelProducts
             // 
             this.flowLayoutPanelProducts.AutoScroll = true;
-            this.flowLayoutPanelProducts.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanelProducts.Location = new System.Drawing.Point(4, 4);
+            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
-            this.flowLayoutPanelProducts.Size = new System.Drawing.Size(692, 373);
+            this.flowLayoutPanelProducts.Size = new System.Drawing.Size(923, 459);
             this.flowLayoutPanelProducts.TabIndex = 0;
             // 
             // lblTotalPriceH
             // 
             this.lblTotalPriceH.AutoSize = true;
             this.lblTotalPriceH.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPriceH.Location = new System.Drawing.Point(204, 405);
+            this.lblTotalPriceH.Location = new System.Drawing.Point(270, 507);
+            this.lblTotalPriceH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalPriceH.Name = "lblTotalPriceH";
-            this.lblTotalPriceH.Size = new System.Drawing.Size(78, 17);
+            this.lblTotalPriceH.Size = new System.Drawing.Size(101, 23);
             this.lblTotalPriceH.TabIndex = 1;
             this.lblTotalPriceH.Text = "Total Price:";
             // 
@@ -60,9 +62,10 @@ namespace OnlineBookStore
             // 
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(288, 405);
+            this.lblTotalPrice.Location = new System.Drawing.Point(382, 507);
+            this.lblTotalPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(35, 17);
+            this.lblTotalPrice.Size = new System.Drawing.Size(45, 23);
             this.lblTotalPrice.TabIndex = 2;
             this.lblTotalPrice.Text = "Toto";
             // 
@@ -70,9 +73,10 @@ namespace OnlineBookStore
             // 
             this.lblTotalAmountH.AutoSize = true;
             this.lblTotalAmountH.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmountH.Location = new System.Drawing.Point(368, 405);
+            this.lblTotalAmountH.Location = new System.Drawing.Point(489, 507);
+            this.lblTotalAmountH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalAmountH.Name = "lblTotalAmountH";
-            this.lblTotalAmountH.Size = new System.Drawing.Size(98, 17);
+            this.lblTotalAmountH.Size = new System.Drawing.Size(128, 23);
             this.lblTotalAmountH.TabIndex = 3;
             this.lblTotalAmountH.Text = "Total Amount:";
             // 
@@ -80,18 +84,20 @@ namespace OnlineBookStore
             // 
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmount.Location = new System.Drawing.Point(472, 405);
+            this.lblTotalAmount.Location = new System.Drawing.Point(627, 507);
+            this.lblTotalAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(28, 17);
+            this.lblTotalAmount.Size = new System.Drawing.Size(36, 23);
             this.lblTotalAmount.TabIndex = 4;
             this.lblTotalAmount.Text = "Am";
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(18, 405);
+            this.btnCancel.Location = new System.Drawing.Point(22, 498);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(122, 33);
+            this.btnCancel.Size = new System.Drawing.Size(163, 41);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel Order";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -99,16 +105,17 @@ namespace OnlineBookStore
             // btnOrder
             // 
             this.btnOrder.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.Location = new System.Drawing.Point(560, 405);
+            this.btnOrder.Location = new System.Drawing.Point(745, 498);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(122, 33);
+            this.btnOrder.Size = new System.Drawing.Size(163, 41);
             this.btnOrder.TabIndex = 6;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = true;
             // 
             // UserControlShoppingCart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnCancel);
@@ -117,9 +124,9 @@ namespace OnlineBookStore
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.lblTotalPriceH);
             this.Controls.Add(this.flowLayoutPanelProducts);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserControlShoppingCart";
-            this.Size = new System.Drawing.Size(698, 462);
+            this.Size = new System.Drawing.Size(931, 569);
             this.ResumeLayout(false);
             this.PerformLayout();
 

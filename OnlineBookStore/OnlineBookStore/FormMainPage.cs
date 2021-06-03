@@ -93,7 +93,7 @@ namespace OnlineBookStore
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
-
+            userControlChangeInformations.Visible = false;
             userControlBooks.DeleteBook();
             userControlBooks.CreateBook();
 
@@ -110,6 +110,7 @@ namespace OnlineBookStore
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
+            userControlChangeInformations.Visible = false;
 
             userControlMusicCDs.DeleteMusicCD();
             userControlMusicCDs.CreateMusicCD();
@@ -127,6 +128,7 @@ namespace OnlineBookStore
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
+            userControlChangeInformations.Visible = false;
 
             UserControlMagazines.DeleteMagazine();
             UserControlMagazines.CreateMagazine();
@@ -144,6 +146,7 @@ namespace OnlineBookStore
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = true;
+            userControlChangeInformations.Visible = false;
 
             userControlMyPage.SetLabelMyPage();
             this.panelProductDisplay.Controls.Add(userControlMyPage);
@@ -158,8 +161,9 @@ namespace OnlineBookStore
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
-
+            userControlChangeInformations.Visible = false;
             userControlShoppingCart.Visible = true;
+
             userControlShoppingCart.ListCart();
             this.panelProductDisplay.Controls.Add(userControlShoppingCart);
         }

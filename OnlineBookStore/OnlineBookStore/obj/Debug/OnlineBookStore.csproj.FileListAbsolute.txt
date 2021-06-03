@@ -85,3 +85,7 @@ C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBo
 C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.CoreCompileInputs.cache
 C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.exe
 C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.pdb
+C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlChangeInformations.resources
+C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMagazineDetails.resources
+C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMusicCDDetail.resources
+C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyPage.resources
