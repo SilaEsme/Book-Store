@@ -17,7 +17,6 @@ namespace OnlineBookStore
         private void btn_login_Click(object sender, EventArgs e)
         {
             bool flag = false;
-            bool flag2 = false;
             HashCriptology hashCriptology = new HashCriptology();
             string sifre = txtPassword.Text;
             hashCriptology.MD5Sifrele(ref sifre);

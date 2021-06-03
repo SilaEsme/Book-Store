@@ -40,8 +40,8 @@ namespace OnlineBookStore
             this.lblEMail = new System.Windows.Forms.Label();
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBoxCustomer = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNameH
@@ -154,13 +154,14 @@ namespace OnlineBookStore
             this.lblName.TabIndex = 8;
             this.lblName.Text = "Name";
             // 
-            // pictureBox1
+            // pictureBoxCustomer
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(69, 104);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(267, 284);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxCustomer.Location = new System.Drawing.Point(69, 104);
+            this.pictureBoxCustomer.Name = "pictureBoxCustomer";
+            this.pictureBoxCustomer.Size = new System.Drawing.Size(267, 284);
+            this.pictureBoxCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCustomer.TabIndex = 0;
+            this.pictureBoxCustomer.TabStop = false;
             // 
             // UserControlMyPage
             // 
@@ -177,10 +178,10 @@ namespace OnlineBookStore
             this.Controls.Add(this.lblEMailH);
             this.Controls.Add(this.lblSurnameH);
             this.Controls.Add(this.lblNameH);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxCustomer);
             this.Name = "UserControlMyPage";
             this.Size = new System.Drawing.Size(920, 535);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,7 +189,7 @@ namespace OnlineBookStore
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxCustomer;
         private System.Windows.Forms.Label lblNameH;
         private System.Windows.Forms.Label lblSurnameH;
         private System.Windows.Forms.Label lblEMailH;

@@ -34,13 +34,13 @@ namespace OnlineBookStore
             this.lblNameH = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMusicCD = new System.Windows.Forms.PictureBox();
             this.lblTypeH = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
             this.lblSingerH = new System.Windows.Forms.Label();
             this.lblSinger = new System.Windows.Forms.Label();
             this.labelAddInfo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMusicCD)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_AddtoCart
@@ -49,10 +49,10 @@ namespace OnlineBookStore
             this.btn_AddtoCart.FlatAppearance.BorderSize = 0;
             this.btn_AddtoCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddtoCart.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddtoCart.Location = new System.Drawing.Point(410, 300);
-            this.btn_AddtoCart.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AddtoCart.Location = new System.Drawing.Point(547, 369);
+            this.btn_AddtoCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_AddtoCart.Name = "btn_AddtoCart";
-            this.btn_AddtoCart.Size = new System.Drawing.Size(130, 41);
+            this.btn_AddtoCart.Size = new System.Drawing.Size(173, 50);
             this.btn_AddtoCart.TabIndex = 46;
             this.btn_AddtoCart.Text = "Add to Cart";
             this.btn_AddtoCart.UseVisualStyleBackColor = false;
@@ -62,10 +62,9 @@ namespace OnlineBookStore
             // 
             this.lblPriceH.AutoSize = true;
             this.lblPriceH.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceH.Location = new System.Drawing.Point(216, 333);
-            this.lblPriceH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPriceH.Location = new System.Drawing.Point(288, 410);
             this.lblPriceH.Name = "lblPriceH";
-            this.lblPriceH.Size = new System.Drawing.Size(47, 19);
+            this.lblPriceH.Size = new System.Drawing.Size(53, 23);
             this.lblPriceH.TabIndex = 45;
             this.lblPriceH.Text = "Price:";
             // 
@@ -73,10 +72,9 @@ namespace OnlineBookStore
             // 
             this.lblNameH.AutoSize = true;
             this.lblNameH.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameH.Location = new System.Drawing.Point(421, 131);
-            this.lblNameH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNameH.Location = new System.Drawing.Point(561, 161);
             this.lblNameH.Name = "lblNameH";
-            this.lblNameH.Size = new System.Drawing.Size(53, 19);
+            this.lblNameH.Size = new System.Drawing.Size(62, 23);
             this.lblNameH.TabIndex = 44;
             this.lblNameH.Text = "Name:";
             // 
@@ -84,10 +82,9 @@ namespace OnlineBookStore
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(274, 333);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrice.Location = new System.Drawing.Point(365, 410);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(17, 19);
+            this.lblPrice.Size = new System.Drawing.Size(19, 23);
             this.lblPrice.TabIndex = 43;
             this.lblPrice.Text = "9";
             // 
@@ -95,30 +92,29 @@ namespace OnlineBookStore
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(486, 133);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Location = new System.Drawing.Point(648, 164);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(46, 19);
+            this.lblName.Size = new System.Drawing.Size(56, 23);
             this.lblName.TabIndex = 42;
             this.lblName.Text = "Name";
             // 
-            // pictureBox1
+            // pictureBoxMusicCD
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(158, 111);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(191, 203);
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxMusicCD.Location = new System.Drawing.Point(211, 137);
+            this.pictureBoxMusicCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxMusicCD.Name = "pictureBoxMusicCD";
+            this.pictureBoxMusicCD.Size = new System.Drawing.Size(255, 250);
+            this.pictureBoxMusicCD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMusicCD.TabIndex = 41;
+            this.pictureBoxMusicCD.TabStop = false;
             // 
             // lblTypeH
             // 
             this.lblTypeH.AutoSize = true;
             this.lblTypeH.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTypeH.Location = new System.Drawing.Point(428, 223);
-            this.lblTypeH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTypeH.Location = new System.Drawing.Point(571, 274);
             this.lblTypeH.Name = "lblTypeH";
-            this.lblTypeH.Size = new System.Drawing.Size(45, 19);
+            this.lblTypeH.Size = new System.Drawing.Size(53, 23);
             this.lblTypeH.TabIndex = 39;
             this.lblTypeH.Text = "Type:";
             // 
@@ -126,10 +122,9 @@ namespace OnlineBookStore
             // 
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblType.Location = new System.Drawing.Point(486, 226);
-            this.lblType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblType.Location = new System.Drawing.Point(648, 278);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(38, 19);
+            this.lblType.Size = new System.Drawing.Size(46, 23);
             this.lblType.TabIndex = 37;
             this.lblType.Text = "Type";
             // 
@@ -137,10 +132,9 @@ namespace OnlineBookStore
             // 
             this.lblSingerH.AutoSize = true;
             this.lblSingerH.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSingerH.Location = new System.Drawing.Point(418, 177);
-            this.lblSingerH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSingerH.Location = new System.Drawing.Point(557, 218);
             this.lblSingerH.Name = "lblSingerH";
-            this.lblSingerH.Size = new System.Drawing.Size(57, 19);
+            this.lblSingerH.Size = new System.Drawing.Size(66, 23);
             this.lblSingerH.TabIndex = 32;
             this.lblSingerH.Text = "Singer:";
             // 
@@ -148,25 +142,25 @@ namespace OnlineBookStore
             // 
             this.lblSinger.AutoSize = true;
             this.lblSinger.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSinger.Location = new System.Drawing.Point(486, 180);
-            this.lblSinger.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSinger.Location = new System.Drawing.Point(648, 222);
             this.lblSinger.Name = "lblSinger";
-            this.lblSinger.Size = new System.Drawing.Size(48, 19);
+            this.lblSinger.Size = new System.Drawing.Size(58, 23);
             this.lblSinger.TabIndex = 29;
             this.lblSinger.Text = "Singer";
             // 
             // labelAddInfo
             // 
             this.labelAddInfo.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddInfo.Location = new System.Drawing.Point(407, 355);
+            this.labelAddInfo.Location = new System.Drawing.Point(543, 437);
+            this.labelAddInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAddInfo.Name = "labelAddInfo";
-            this.labelAddInfo.Size = new System.Drawing.Size(133, 36);
+            this.labelAddInfo.Size = new System.Drawing.Size(177, 44);
             this.labelAddInfo.TabIndex = 58;
             this.labelAddInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UserControlMusicCDDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelAddInfo);
             this.Controls.Add(this.btn_AddtoCart);
@@ -174,15 +168,15 @@ namespace OnlineBookStore
             this.Controls.Add(this.lblNameH);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxMusicCD);
             this.Controls.Add(this.lblTypeH);
             this.Controls.Add(this.lblType);
             this.Controls.Add(this.lblSingerH);
             this.Controls.Add(this.lblSinger);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserControlMusicCDDetail";
-            this.Size = new System.Drawing.Size(698, 462);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(931, 569);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMusicCD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +189,7 @@ namespace OnlineBookStore
         private System.Windows.Forms.Label lblNameH;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxMusicCD;
         private System.Windows.Forms.Label lblTypeH;
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Label lblSingerH;

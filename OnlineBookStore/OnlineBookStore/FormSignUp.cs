@@ -31,7 +31,7 @@ namespace OnlineBookStore
             {
                 if (txtPassword.Text == txtConfirmPassword.Text)
                 {
-                    string command = "INSERT INTO Customer(Name, Surname, Adress, EMail, Username, Password) VALUES(@Name, @Surname, @Adress, @EMail, @Username, @Password)";
+                    string command = "INSERT INTO Customer(Name, Surname, Adress, EMail, Username, Password, ImagePath) VALUES(@Name, @Surname, @Adress, @EMail, @Username, @Password, @ImagePath)";
                     Command = new SqlCommand(command, Database.CreateSingle().Sqlconnection);
                     Command.Parameters.AddWithValue("@Name", txtName.Text);
                     Command.Parameters.AddWithValue("@Surname", txtSurname.Text);
@@ -39,6 +39,7 @@ namespace OnlineBookStore
                     Command.Parameters.AddWithValue("@EMail", txteMail.Text);
                     Command.Parameters.AddWithValue("@Password", sifre);
                     Command.Parameters.AddWithValue("@Username", txtUsername.Text);
+                    Command.Parameters.AddWithValue("@ImagePath", "default-picture.jpg");
 
                     while (dr.Read())
                     {

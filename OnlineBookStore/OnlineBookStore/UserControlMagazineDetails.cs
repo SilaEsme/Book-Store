@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace OnlineBookStore
@@ -22,6 +25,30 @@ namespace OnlineBookStore
             lblIssue.Text = Issue;
             lblPrice.Text = Price;
             lblType.Text = type.ToString();
+
+            Database database = Database.CreateSingle();
+            database.GetConnection();
+
+            string imagename = "";
+            var dirs = Directory.GetFiles(@"Magazine Images", "*.*").Where(s => s.EndsWith(".png") || s.EndsWith(".jpg") || s.EndsWith(".jpeg"));
+            SqlCommand command = new SqlCommand("SELECT ImagePath FROM dbo.Magazines WHERE name = @name", Database.CreateSingle().Sqlconnection);
+            command.Parameters.AddWithValue("@name", lblName.Text);
+            Database.CreateSingle().Sqlconnection.Open();
+            SqlDataReader dr = command.ExecuteReader();
+
+            while (dr.Read())
+            {
+                imagename = dr.GetString(0);
+            }
+            Database.CreateSingle().Sqlconnection.Close();
+
+            foreach (var item in dirs)
+            {
+                if (Path.GetFileName(item) == imagename)
+                {
+                    pictureBoxMagazine.Image = new Bitmap(item);
+                }
+            }
         }
 
         public UserControlMagazineDetails()
@@ -46,11 +73,13 @@ namespace OnlineBookStore
 
             if (read == false)//data yoktur yeni eklenecek
             {
-                SqlCommand command = new SqlCommand("INSERT INTO dbo.ShoppingCart VALUES (@name,@price,@amount,@username)", Database.CreateSingle().Sqlconnection);
+                SqlCommand command = new SqlCommand("INSERT INTO dbo.ShoppingCart VALUES (@name,@price,@amount,@username,@producttype)", Database.CreateSingle().Sqlconnection);
                 command.Parameters.AddWithValue("@name", lblName.Text);
                 command.Parameters.AddWithValue("@price", lblPrice.Text);
                 command.Parameters.AddWithValue("@amount", "1");
                 command.Parameters.AddWithValue("@username", Customer.CreateCustomer().userInfo.Username);
+                command.Parameters.AddWithValue("@producttype", "Magazine");
+
                 Database.CreateSingle().Sqlconnection.Open();
                 command.ExecuteNonQuery();
                 Database.CreateSingle().Sqlconnection.Close();

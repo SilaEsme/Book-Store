@@ -14,6 +14,7 @@
             get => product;
             set => product = value;
         }
+
         public string Quantity
         {
             get => quantity;

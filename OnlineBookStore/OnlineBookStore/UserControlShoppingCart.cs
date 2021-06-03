@@ -1,18 +1,21 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace OnlineBookStore
 {
     public partial class UserControlShoppingCart : UserControl
     {
-        ShoppingCart ShoppingCart = new ShoppingCart();
+        private ShoppingCart ShoppingCart = new ShoppingCart();
+
         public UserControlShoppingCart()
         {
             InitializeComponent();
         }
+
         private void GetList()
         {
-            SqlCommand command = new SqlCommand("SELECT ProductName, Price, Amount, ProductType FROM dbo.ShoppingCart where Username = '"+ Customer.CreateCustomer().userInfo.Username + "'", Database.CreateSingle().Sqlconnection);
+            SqlCommand command = new SqlCommand("SELECT ProductName, Price, Amount, ProductType FROM dbo.ShoppingCart where Username = '" + Customer.CreateCustomer().userInfo.Username + "'", Database.CreateSingle().Sqlconnection);
             Database.CreateSingle().Sqlconnection.Open();
             SqlDataReader dr = command.ExecuteReader();
 
@@ -51,16 +54,26 @@ namespace OnlineBookStore
             }
             Database.CreateSingle().Sqlconnection.Close();
         }
+
         public void ListCart()
         {
+            ShoppingCart.List.Clear();
+            flowLayoutPanelProducts.Controls.Clear();
             GetList();
-
+            double totalprice = 0;
+            int totalamount = 0;
             foreach (var item in ShoppingCart.List)
             {
                 UserControlShoppingCartItem cartItem = new UserControlShoppingCartItem();
                 cartItem.SetLabel(item.Product.ProductName, item.Product.ProductPrice, item.Quantity);
                 flowLayoutPanelProducts.Controls.Add(cartItem);
+                item.Product.ProductPrice = item.Product.ProductPrice.Replace('.', ',');
+
+                totalprice += Double.Parse(item.Product.ProductPrice) * Int32.Parse(item.Quantity);
+                totalamount += Int32.Parse(item.Quantity);
             }
+            lblTotalPrice.Text = totalprice.ToString().Replace(',', '.');
+            lblTotalAmount.Text = totalamount.ToString();
         }
     }
 }

@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace OnlineBookStore
@@ -22,6 +26,26 @@ namespace OnlineBookStore
             lblEMail.Text = customer.Email;
             lblAddress.Text = customer.Adress;
             lblUsername.Text = customer.userInfo.Username;
+            string imagename = "";
+            var dirs = Directory.GetFiles(@"Profile Images", "*.*").Where(s => s.EndsWith(".png") || s.EndsWith(".jpg") || s.EndsWith(".jpeg"));
+            SqlCommand command = new SqlCommand("SELECT ImagePath FROM dbo.Customer WHERE username = @username", Database.CreateSingle().Sqlconnection);
+            command.Parameters.AddWithValue("@username", Customer.CreateCustomer().userInfo.Username);
+            Database.CreateSingle().Sqlconnection.Open();
+            SqlDataReader dr = command.ExecuteReader();
+
+            while (dr.Read())
+            {
+                imagename = dr.GetString(0);
+            }
+            Database.CreateSingle().Sqlconnection.Close();
+
+            foreach (var item in dirs)
+            {
+                if (Path.GetFileName(item) == imagename)
+                {
+                    pictureBoxCustomer.Image = new Bitmap(item);
+                }
+            }
         }
 
         private void btnUpdateInfo_Click(object sender, EventArgs e)

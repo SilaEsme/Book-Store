@@ -13,10 +13,12 @@ namespace OnlineBookStore
         public ShoppingCart()
         {
         }
+
         public List<ItemToPurchase> List
         {
             get => list;
         }
+
         public void AddProduct(ItemToPurchase item)
         {
             list.Add(item);

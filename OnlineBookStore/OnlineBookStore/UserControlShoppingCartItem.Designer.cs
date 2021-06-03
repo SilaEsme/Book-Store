@@ -29,7 +29,7 @@ namespace OnlineBookStore
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_product = new System.Windows.Forms.PictureBox();
             this.btnIncrease = new System.Windows.Forms.Button();
             this.btnDecrase = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -40,23 +40,26 @@ namespace OnlineBookStore
             this.lblTotalPriceH = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.lblTotalAmount = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_product)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBox_product
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(70, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 84);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_product.Location = new System.Drawing.Point(43, 20);
+            this.pictureBox_product.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox_product.Name = "pictureBox_product";
+            this.pictureBox_product.Size = new System.Drawing.Size(120, 103);
+            this.pictureBox_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_product.TabIndex = 0;
+            this.pictureBox_product.TabStop = false;
             // 
             // btnIncrease
             // 
             this.btnIncrease.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncrease.Location = new System.Drawing.Point(232, 9);
+            this.btnIncrease.Location = new System.Drawing.Point(259, 11);
+            this.btnIncrease.Margin = new System.Windows.Forms.Padding(4);
             this.btnIncrease.Name = "btnIncrease";
-            this.btnIncrease.Size = new System.Drawing.Size(34, 31);
+            this.btnIncrease.Size = new System.Drawing.Size(45, 38);
             this.btnIncrease.TabIndex = 1;
             this.btnIncrease.Text = "+";
             this.btnIncrease.UseVisualStyleBackColor = true;
@@ -64,9 +67,10 @@ namespace OnlineBookStore
             // btnDecrase
             // 
             this.btnDecrase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDecrase.Location = new System.Drawing.Point(232, 77);
+            this.btnDecrase.Location = new System.Drawing.Point(259, 95);
+            this.btnDecrase.Margin = new System.Windows.Forms.Padding(4);
             this.btnDecrase.Name = "btnDecrase";
-            this.btnDecrase.Size = new System.Drawing.Size(34, 31);
+            this.btnDecrase.Size = new System.Drawing.Size(45, 38);
             this.btnDecrase.TabIndex = 2;
             this.btnDecrase.Text = "-";
             this.btnDecrase.UseVisualStyleBackColor = true;
@@ -74,9 +78,10 @@ namespace OnlineBookStore
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(641, 45);
+            this.btnDelete.Location = new System.Drawing.Point(805, 55);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(34, 31);
+            this.btnDelete.Size = new System.Drawing.Size(45, 38);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "X";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -84,9 +89,10 @@ namespace OnlineBookStore
             // lblNameH
             // 
             this.lblNameH.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameH.Location = new System.Drawing.Point(292, 13);
+            this.lblNameH.Location = new System.Drawing.Point(339, 16);
+            this.lblNameH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameH.Name = "lblNameH";
-            this.lblNameH.Size = new System.Drawing.Size(93, 24);
+            this.lblNameH.Size = new System.Drawing.Size(124, 30);
             this.lblNameH.TabIndex = 4;
             this.lblNameH.Text = "Name";
             this.lblNameH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -94,9 +100,10 @@ namespace OnlineBookStore
             // lblName
             // 
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(391, 16);
+            this.lblName.Location = new System.Drawing.Point(471, 20);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(244, 24);
+            this.lblName.Size = new System.Drawing.Size(325, 30);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Validenin Günlüğü";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -104,9 +111,10 @@ namespace OnlineBookStore
             // lblPriceH
             // 
             this.lblPriceH.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceH.Location = new System.Drawing.Point(292, 45);
+            this.lblPriceH.Location = new System.Drawing.Point(339, 55);
+            this.lblPriceH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPriceH.Name = "lblPriceH";
-            this.lblPriceH.Size = new System.Drawing.Size(93, 24);
+            this.lblPriceH.Size = new System.Drawing.Size(124, 30);
             this.lblPriceH.TabIndex = 6;
             this.lblPriceH.Text = "Price";
             this.lblPriceH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -114,9 +122,10 @@ namespace OnlineBookStore
             // lblPrice
             // 
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(391, 44);
+            this.lblPrice.Location = new System.Drawing.Point(471, 54);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(244, 24);
+            this.lblPrice.Size = new System.Drawing.Size(325, 30);
             this.lblPrice.TabIndex = 7;
             this.lblPrice.Text = "100";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,9 +133,10 @@ namespace OnlineBookStore
             // lblTotalPriceH
             // 
             this.lblTotalPriceH.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPriceH.Location = new System.Drawing.Point(292, 77);
+            this.lblTotalPriceH.Location = new System.Drawing.Point(339, 95);
+            this.lblTotalPriceH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalPriceH.Name = "lblTotalPriceH";
-            this.lblTotalPriceH.Size = new System.Drawing.Size(93, 24);
+            this.lblTotalPriceH.Size = new System.Drawing.Size(124, 30);
             this.lblTotalPriceH.TabIndex = 8;
             this.lblTotalPriceH.Text = "Total Price";
             this.lblTotalPriceH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -134,9 +144,10 @@ namespace OnlineBookStore
             // lblTotalPrice
             // 
             this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(391, 76);
+            this.lblTotalPrice.Location = new System.Drawing.Point(471, 94);
+            this.lblTotalPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(244, 24);
+            this.lblTotalPrice.Size = new System.Drawing.Size(325, 30);
             this.lblTotalPrice.TabIndex = 9;
             this.lblTotalPrice.Text = "500";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,16 +155,17 @@ namespace OnlineBookStore
             // lblTotalAmount
             // 
             this.lblTotalAmount.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmount.Location = new System.Drawing.Point(231, 43);
+            this.lblTotalAmount.Location = new System.Drawing.Point(258, 53);
+            this.lblTotalAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(35, 31);
+            this.lblTotalAmount.Size = new System.Drawing.Size(47, 38);
             this.lblTotalAmount.TabIndex = 10;
             this.lblTotalAmount.Text = "5";
             this.lblTotalAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UserControlShoppingCartItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.lblTotalPrice);
@@ -165,18 +177,18 @@ namespace OnlineBookStore
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDecrase);
             this.Controls.Add(this.btnIncrease);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.pictureBox_product);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserControlShoppingCartItem";
-            this.Size = new System.Drawing.Size(692, 118);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(892, 145);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_product)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox_product;
         private System.Windows.Forms.Button btnIncrease;
         private System.Windows.Forms.Button btnDecrase;
         private System.Windows.Forms.Button btnDelete;

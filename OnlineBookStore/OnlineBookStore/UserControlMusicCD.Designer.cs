@@ -31,9 +31,9 @@ namespace OnlineBookStore
         {
             this.btnReadMore = new System.Windows.Forms.Button();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMusicCD = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMusicCD)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReadMore
@@ -59,13 +59,14 @@ namespace OnlineBookStore
             this.lblPrice.Text = "Price";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // pictureBoxMusicCD
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(30, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(164, 121);
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxMusicCD.Location = new System.Drawing.Point(30, 17);
+            this.pictureBoxMusicCD.Name = "pictureBoxMusicCD";
+            this.pictureBoxMusicCD.Size = new System.Drawing.Size(164, 121);
+            this.pictureBoxMusicCD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMusicCD.TabIndex = 19;
+            this.pictureBoxMusicCD.TabStop = false;
             // 
             // lblName
             // 
@@ -83,11 +84,11 @@ namespace OnlineBookStore
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnReadMore);
             this.Controls.Add(this.lblPrice);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxMusicCD);
             this.Controls.Add(this.lblName);
             this.Name = "UserControlMusicCD";
             this.Size = new System.Drawing.Size(230, 292);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMusicCD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -96,7 +97,7 @@ namespace OnlineBookStore
 
         private System.Windows.Forms.Button btnReadMore;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxMusicCD;
         private System.Windows.Forms.Label lblName;
     }
 }
