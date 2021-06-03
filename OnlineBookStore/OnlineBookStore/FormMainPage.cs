@@ -75,7 +75,7 @@ namespace OnlineBookStore
             userControlMusicCDDetail = UserControlMusicCDDetail.CreateMusicCDDeatils();
             userControlMagazineDetails = UserControlMagazineDetails.CreateMagazineDetails();
             userControlChangeInformations = new UserControlChangeInformations();
-            userControlMyPage = new UserControlMyPage();
+            userControlMyPage = UserControlMyPage.CreateMyPage();
         }
 
         private void pictureBoxExit_Click(object sender, EventArgs e)

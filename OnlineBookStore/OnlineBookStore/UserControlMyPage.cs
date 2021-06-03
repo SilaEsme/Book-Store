@@ -13,12 +13,41 @@ namespace OnlineBookStore
         private UserControlProductDetails userControlProductDetails = UserControlProductDetails.CreateProductDetails();
         private UserControlMusicCDDetail userControlMusicCDDetail = UserControlMusicCDDetail.CreateMusicCDDeatils();
         private UserControlMagazineDetails userControlMagazineDetails = UserControlMagazineDetails.CreateMagazineDetails();
-
-        public UserControlMyPage()
+      
+        private static UserControlMyPage userControlMyPage;
+        public string lblname
         {
-            InitializeComponent();
+            get => lblName.Text;
+            set => lblName.Text = value;
+        }
+        public string lblsurname
+        {
+            get => lblSurname.Text;
+            set => lblSurname.Text = value;
+        }
+        public string lblemail
+        {
+            get => lblEMail.Text;
+            set => lblEMail.Text = value;
+        }
+        public string lbladdress
+        {
+            get => lblAddress.Text;
+            set => lblAddress.Text = value;
         }
 
+        public static UserControlMyPage CreateMyPage()
+        {
+            if (userControlMyPage == null)
+                userControlMyPage = new UserControlMyPage();
+            return userControlMyPage;
+        }
+        protected UserControlMyPage()
+        {
+            userControlMyPage = this;
+            InitializeComponent();
+        }
+        
         public void SetLabelMyPage()
         {
             lblName.Text = customer.Name;

@@ -63,6 +63,7 @@ namespace OnlineBookStore
             this.btnIncrease.TabIndex = 1;
             this.btnIncrease.Text = "+";
             this.btnIncrease.UseVisualStyleBackColor = true;
+            this.btnIncrease.Click += new System.EventHandler(this.btnIncrease_Click);
             // 
             // btnDecrase
             // 
@@ -74,6 +75,7 @@ namespace OnlineBookStore
             this.btnDecrase.TabIndex = 2;
             this.btnDecrase.Text = "-";
             this.btnDecrase.UseVisualStyleBackColor = true;
+            this.btnDecrase.Click += new System.EventHandler(this.btnDecrase_Click);
             // 
             // btnDelete
             // 
@@ -85,6 +87,7 @@ namespace OnlineBookStore
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "X";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lblNameH
             // 

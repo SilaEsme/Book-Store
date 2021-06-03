@@ -87,6 +87,12 @@
     <Compile Include="UserControlBook.Designer.cs">
       <DependentUpon>UserControlBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPayment.Designer.cs">
+      <DependentUpon>UserControlPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlProductDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlBook.resx">
       <DependentUpon>UserControlBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPayment.resx">
+      <DependentUpon>UserControlPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlProductDetails.resx">
       <DependentUpon>UserControlProductDetails.cs</DependentUpon>

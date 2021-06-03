@@ -37,7 +37,7 @@ namespace OnlineBookStore
 
             Database database = Database.CreateSingle();
             database.GetConnection();
-           
+
             string imagename = "";
             var dirs = Directory.GetFiles(@"Book Images", "*.*").Where(s => s.EndsWith(".png") || s.EndsWith(".jpg") || s.EndsWith(".jpeg"));
             SqlCommand command = new SqlCommand("SELECT ImagePath FROM dbo.Books WHERE name = @name", Database.CreateSingle().Sqlconnection);
@@ -117,6 +117,5 @@ namespace OnlineBookStore
             };
             t.Start();
         }
-
     }
 }

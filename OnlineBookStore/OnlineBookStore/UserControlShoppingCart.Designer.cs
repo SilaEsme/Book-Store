@@ -99,6 +99,7 @@ namespace OnlineBookStore
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel Order";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOrder
             // 
@@ -108,8 +109,9 @@ namespace OnlineBookStore
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(163, 41);
             this.btnOrder.TabIndex = 6;
-            this.btnOrder.Text = "Order";
+            this.btnOrder.Text = "Order Now";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // UserControlShoppingCart
             // 
@@ -131,13 +133,12 @@ namespace OnlineBookStore
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelProducts;
         private System.Windows.Forms.Label lblTotalPriceH;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label lblTotalAmountH;
         private System.Windows.Forms.Label lblTotalAmount;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOrder;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanelProducts;
     }
 }

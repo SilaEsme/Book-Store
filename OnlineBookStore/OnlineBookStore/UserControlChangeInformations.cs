@@ -11,7 +11,7 @@ namespace OnlineBookStore
     {
         private Customer customer = Customer.CreateCustomer();
         private Byte[] _bytesOfImage;
-
+        UserControlMyPage userControlMyPage;
         public UserControlChangeInformations()
         {
             InitializeComponent();
@@ -79,6 +79,26 @@ namespace OnlineBookStore
             command.ExecuteNonQuery();
             Database.CreateSingle().Sqlconnection.Close();
             MessageBox.Show("The profile image is added.");
+        }
+
+        private void btnUpdateInfo_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("UPDATE Customer SET Name=@name, Surname=@surname,Adress=@adress,Email=@Email where username=@username", Database.CreateSingle().Sqlconnection);
+            command.Parameters.AddWithValue("@name", txtname.Text);
+            command.Parameters.AddWithValue("@surname", txtsurname.Text);
+            command.Parameters.AddWithValue("@adress", txtaddress.Text);
+            command.Parameters.AddWithValue("@Email", txtemail.Text);
+            command.Parameters.AddWithValue("@username", Customer.CreateCustomer().userInfo.Username);
+            Database.CreateSingle().Sqlconnection.Open();
+            command.ExecuteNonQuery();
+            Database.CreateSingle().Sqlconnection.Close();
+
+            customer.Name= txtname.Text;
+            customer.Surname= txtsurname.Text;
+            customer.Email= txtemail.Text;
+            customer.Adress= txtaddress.Text;
+
+            lblInfoUpdate.Text = "Your Informations is Updated Succesfully!";
         }
     }
 }

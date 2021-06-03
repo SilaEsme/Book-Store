@@ -30,14 +30,14 @@ namespace OnlineBookStore
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panelProductDisplay = new System.Windows.Forms.Panel();
-            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnMyPage = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnShoppingCart = new System.Windows.Forms.Button();
             this.btnMusicCDs = new System.Windows.Forms.Button();
             this.btnMagazines = new System.Windows.Forms.Button();
+            this.panelProductDisplay = new System.Windows.Forms.Panel();
+            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
             this.pictureBox_Icon = new System.Windows.Forms.PictureBox();
             this.MagicTitle = new System.Windows.Forms.Label();
             this.lblTitlebook = new System.Windows.Forms.Label();
@@ -59,29 +59,8 @@ namespace OnlineBookStore
             this.panel3.Location = new System.Drawing.Point(3, 94);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(226, 595);
+            this.panel3.Size = new System.Drawing.Size(226, 607);
             this.panel3.TabIndex = 3;
-            // 
-            // panelProductDisplay
-            // 
-            this.panelProductDisplay.BackColor = System.Drawing.SystemColors.Control;
-            this.panelProductDisplay.Location = new System.Drawing.Point(13, 12);
-            this.panelProductDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelProductDisplay.Name = "panelProductDisplay";
-            this.panelProductDisplay.Size = new System.Drawing.Size(958, 569);
-            this.panelProductDisplay.TabIndex = 4;
-            // 
-            // pictureBoxExit
-            // 
-            this.pictureBoxExit.Image = global::OnlineBookStore.Properties.Resources.icons8_close_window_64;
-            this.pictureBoxExit.Location = new System.Drawing.Point(1204, 11);
-            this.pictureBoxExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxExit.Name = "pictureBoxExit";
-            this.pictureBoxExit.Size = new System.Drawing.Size(47, 46);
-            this.pictureBoxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxExit.TabIndex = 0;
-            this.pictureBoxExit.TabStop = false;
-            this.pictureBoxExit.Click += new System.EventHandler(this.pictureBoxExit_Click);
             // 
             // button1
             // 
@@ -110,7 +89,7 @@ namespace OnlineBookStore
             this.btnMyPage.ForeColor = System.Drawing.SystemColors.Info;
             this.btnMyPage.Image = global::OnlineBookStore.Properties.Resources.icons8_female_profile_50;
             this.btnMyPage.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMyPage.Location = new System.Drawing.Point(9, 512);
+            this.btnMyPage.Location = new System.Drawing.Point(9, 537);
             this.btnMyPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMyPage.Name = "btnMyPage";
             this.btnMyPage.Size = new System.Drawing.Size(204, 67);
@@ -129,7 +108,7 @@ namespace OnlineBookStore
             this.btnBooks.ForeColor = System.Drawing.SystemColors.Info;
             this.btnBooks.Image = global::OnlineBookStore.Properties.Resources.icons8_book_shelf_50;
             this.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBooks.Location = new System.Drawing.Point(9, 112);
+            this.btnBooks.Location = new System.Drawing.Point(9, 117);
             this.btnBooks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBooks.Name = "btnBooks";
             this.btnBooks.Size = new System.Drawing.Size(204, 67);
@@ -148,7 +127,7 @@ namespace OnlineBookStore
             this.btnShoppingCart.ForeColor = System.Drawing.SystemColors.Info;
             this.btnShoppingCart.Image = global::OnlineBookStore.Properties.Resources.icons8_girl_with_glasses_shopping_cart_50;
             this.btnShoppingCart.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnShoppingCart.Location = new System.Drawing.Point(9, 412);
+            this.btnShoppingCart.Location = new System.Drawing.Point(9, 432);
             this.btnShoppingCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShoppingCart.Name = "btnShoppingCart";
             this.btnShoppingCart.Size = new System.Drawing.Size(204, 67);
@@ -167,7 +146,7 @@ namespace OnlineBookStore
             this.btnMusicCDs.ForeColor = System.Drawing.SystemColors.Info;
             this.btnMusicCDs.Image = global::OnlineBookStore.Properties.Resources.icons8_music_50;
             this.btnMusicCDs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMusicCDs.Location = new System.Drawing.Point(9, 212);
+            this.btnMusicCDs.Location = new System.Drawing.Point(9, 222);
             this.btnMusicCDs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMusicCDs.Name = "btnMusicCDs";
             this.btnMusicCDs.Size = new System.Drawing.Size(204, 67);
@@ -186,7 +165,7 @@ namespace OnlineBookStore
             this.btnMagazines.ForeColor = System.Drawing.SystemColors.Info;
             this.btnMagazines.Image = global::OnlineBookStore.Properties.Resources.icons8_comics_magazine_50;
             this.btnMagazines.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMagazines.Location = new System.Drawing.Point(9, 312);
+            this.btnMagazines.Location = new System.Drawing.Point(9, 327);
             this.btnMagazines.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMagazines.Name = "btnMagazines";
             this.btnMagazines.Size = new System.Drawing.Size(204, 67);
@@ -195,6 +174,27 @@ namespace OnlineBookStore
             this.btnMagazines.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMagazines.UseVisualStyleBackColor = false;
             this.btnMagazines.Click += new System.EventHandler(this.btnMagazines_Click);
+            // 
+            // panelProductDisplay
+            // 
+            this.panelProductDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.panelProductDisplay.Location = new System.Drawing.Point(13, 12);
+            this.panelProductDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelProductDisplay.Name = "panelProductDisplay";
+            this.panelProductDisplay.Size = new System.Drawing.Size(958, 569);
+            this.panelProductDisplay.TabIndex = 4;
+            // 
+            // pictureBoxExit
+            // 
+            this.pictureBoxExit.Image = global::OnlineBookStore.Properties.Resources.icons8_close_window_64;
+            this.pictureBoxExit.Location = new System.Drawing.Point(1204, 11);
+            this.pictureBoxExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxExit.Name = "pictureBoxExit";
+            this.pictureBoxExit.Size = new System.Drawing.Size(47, 46);
+            this.pictureBoxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxExit.TabIndex = 0;
+            this.pictureBoxExit.TabStop = false;
+            this.pictureBoxExit.Click += new System.EventHandler(this.pictureBoxExit_Click);
             // 
             // pictureBox_Icon
             // 
@@ -233,7 +233,7 @@ namespace OnlineBookStore
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
             this.panel1.Controls.Add(this.panelProductDisplay);
-            this.panel1.Location = new System.Drawing.Point(246, 94);
+            this.panel1.Location = new System.Drawing.Point(249, 106);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(983, 595);
             this.panel1.TabIndex = 7;

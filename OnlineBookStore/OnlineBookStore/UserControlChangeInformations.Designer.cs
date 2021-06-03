@@ -44,6 +44,7 @@ namespace OnlineBookStore
             this.txtusername = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnSave = new System.Windows.Forms.Button();
+            this.lblInfoUpdate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,22 +109,29 @@ namespace OnlineBookStore
             // 
             // btnUpdateImage
             // 
+            this.btnUpdateImage.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUpdateImage.FlatAppearance.BorderSize = 0;
+            this.btnUpdateImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateImage.Location = new System.Drawing.Point(105, 425);
             this.btnUpdateImage.Name = "btnUpdateImage";
             this.btnUpdateImage.Size = new System.Drawing.Size(194, 54);
             this.btnUpdateImage.TabIndex = 25;
             this.btnUpdateImage.Text = "Update Image";
-            this.btnUpdateImage.UseVisualStyleBackColor = true;
+            this.btnUpdateImage.UseVisualStyleBackColor = false;
             this.btnUpdateImage.Click += new System.EventHandler(this.btnUpdateImage_Click);
             // 
             // btnUpdateInfo
             // 
+            this.btnUpdateInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUpdateInfo.FlatAppearance.BorderSize = 0;
+            this.btnUpdateInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateInfo.Location = new System.Drawing.Point(597, 425);
             this.btnUpdateInfo.Name = "btnUpdateInfo";
-            this.btnUpdateInfo.Size = new System.Drawing.Size(173, 54);
+            this.btnUpdateInfo.Size = new System.Drawing.Size(233, 54);
             this.btnUpdateInfo.TabIndex = 19;
             this.btnUpdateInfo.Text = "Update My Informations";
-            this.btnUpdateInfo.UseVisualStyleBackColor = true;
+            this.btnUpdateInfo.UseVisualStyleBackColor = false;
+            this.btnUpdateInfo.Click += new System.EventHandler(this.btnUpdateInfo_Click);
             // 
             // txtname
             // 
@@ -176,18 +184,32 @@ namespace OnlineBookStore
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Location = new System.Drawing.Point(105, 485);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(194, 54);
             this.btnSave.TabIndex = 32;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lblInfoUpdate
+            // 
+            this.lblInfoUpdate.AutoSize = true;
+            this.lblInfoUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblInfoUpdate.Location = new System.Drawing.Point(713, 504);
+            this.lblInfoUpdate.Name = "lblInfoUpdate";
+            this.lblInfoUpdate.Size = new System.Drawing.Size(0, 17);
+            this.lblInfoUpdate.TabIndex = 33;
+            this.lblInfoUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UserControlChangeInformations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblInfoUpdate);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.txtaddress);
@@ -226,5 +248,6 @@ namespace OnlineBookStore
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lblInfoUpdate;
     }
 }

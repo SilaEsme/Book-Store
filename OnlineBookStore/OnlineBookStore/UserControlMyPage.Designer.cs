@@ -96,9 +96,9 @@ namespace OnlineBookStore
             // 
             // btnUpdateInfo
             // 
-            this.btnUpdateInfo.Location = new System.Drawing.Point(389, 356);
+            this.btnUpdateInfo.Location = new System.Drawing.Point(391, 342);
             this.btnUpdateInfo.Name = "btnUpdateInfo";
-            this.btnUpdateInfo.Size = new System.Drawing.Size(302, 32);
+            this.btnUpdateInfo.Size = new System.Drawing.Size(302, 46);
             this.btnUpdateInfo.TabIndex = 7;
             this.btnUpdateInfo.Text = "Update My Informations";
             this.btnUpdateInfo.UseVisualStyleBackColor = true;
