@@ -6,33 +6,24 @@ namespace OnlineBookStore
 {
     public partial class UserControlMagazines : UserControl
     {
-        private UserControlMagazine userControlMagazine = new UserControlMagazine();
-
-        public UserControlMagazines()
+        public FlowLayoutPanel panel
         {
-            InitializeComponent();
-            //this.CreateMagazine();
+            get => flowLayoutPanelProductDisplay;
+        }
+        private static UserControlMagazines controlMagazines;
+        public static UserControlMagazines CreateControlMagazines()
+        {
+            if (controlMagazines == null)
+            {
+                controlMagazines = new UserControlMagazines();
+            }
+            return controlMagazines;
         }
 
-        public void CreateMagazine()
+        protected UserControlMagazines()
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM Magazines", Database.CreateSingle().Sqlconnection);
-            Database.CreateSingle().Sqlconnection.Open();
-            SqlDataReader dr = command.ExecuteReader();
-
-            while (dr.Read())
-            {
-                Magazine magazine = new Magazine();
-                UserControlMagazine userControlMagazine = new UserControlMagazine();
-                userControlMagazine.SetLabelMagazine(dr.GetString(0), dr.GetString(3));
-                flowLayoutPanelProductDisplay.Controls.Add(userControlMagazine);
-                magazine.ProductName = dr.GetString(0);
-                magazine.Issue = dr.GetString(1);
-                magazine.ProductPrice = dr.GetString(3);
-                magazine._TypeMagazine = (typeMagazine)Enum.Parse(typeof(typeMagazine), dr.GetString(2));
-                userControlMagazine._Magazine = magazine;
-            }
-            Database.CreateSingle().Sqlconnection.Close();
+            controlMagazines = this;
+            InitializeComponent();
         }
 
         public void DeleteMagazine()

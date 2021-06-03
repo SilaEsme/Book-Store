@@ -6,56 +6,23 @@ namespace OnlineBookStore
 {
     public partial class UserControlBooks : UserControl
     {
-        private SqlDependency dependency;
-
-        public UserControlBooks()
+        public FlowLayoutPanel Panel
         {
-            InitializeComponent();
-            //this.CreateBook();
+            get => flowLayoutPanelProductDisplay;
         }
-
-        //private void Dependency()
-        //{
-        //    dependency = new SqlDependency();
-        //    SqlDependency.Start(Database.CreateSingle().ConnectionString);
-
-        //    dependency.OnChange += Dependency_OnChange;
-        //}
-
-        //private void Dependency_OnChange(object sender, SqlNotificationEventArgs e)
-        //{
-        //    MessageBox.Show("Veritabanı güncellenmiştir. " + e.Info.ToString());
-        //    dependency.OnChange -= Dependency_OnChange;
-        //    DeleteBook();
-        //    CreateBook();
-        //}
-
-        public void CreateBook()
+        private static UserControlBooks controlBooks;
+        public static UserControlBooks CreateControlBooks()
         {
-            SqlCommand command = new SqlCommand("SELECT Name,Author,Publisher,Page_Number,ISBN,Price,Cover,Type,ID FROM dbo.Books", Database.CreateSingle().Sqlconnection);
-            Database.CreateSingle().Sqlconnection.Open();
-            //Dependency();
-            SqlDataReader dr = command.ExecuteReader();
-
-            while (dr.Read())
+            if (controlBooks == null)
             {
-                Book book = new Book();
-
-                UserControlBook userControlBook = new UserControlBook();
-                userControlBook.SetLabelBook(dr.GetString(0), dr.GetString(5));
-                flowLayoutPanelProductDisplay.Controls.Add(userControlBook);
-
-                book.ProductName = dr.GetString(0);
-                book.Author = dr.GetString(1);
-                book.Publisher = dr.GetString(2);
-                book.Page = dr.GetString(3);
-                book.BookISBN = dr.GetString(4);
-                book.ProductPrice = dr.GetString(5);
-                book.Cover = dr.GetString(6);
-                book.Type = (_type)Enum.Parse(typeof(_type), dr.GetString(7));
-                userControlBook._Book = book;
+                controlBooks = new UserControlBooks();
             }
-            Database.CreateSingle().Sqlconnection.Close();
+            return controlBooks;
+        }
+        protected UserControlBooks()
+        {
+            controlBooks = this;
+            InitializeComponent();
         }
 
         public void DeleteBook()

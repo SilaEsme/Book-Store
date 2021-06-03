@@ -7,12 +7,13 @@
         private string productName, productPrice;
         private string ISBN, author, publisher;
         private string page, cover;
-        private static int ID;
+        private static int ID = 1;
 
         private _type type;
 
         public Book()
         {
+            ID++;
         }
 
         public string Page

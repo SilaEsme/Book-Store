@@ -7,6 +7,7 @@ namespace OnlineBookStore
     {
         private static FormMainPage mainPage;
 
+        private ProductFactory factory = new ProductFactory();
         private UserControlBooks userControlBooks;
         private UserControlMusicCDs userControlMusicCDs;
         private UserControlMagazines UserControlMagazines;
@@ -18,29 +19,6 @@ namespace OnlineBookStore
         private UserControlChangeInformations userControlChangeInformations;
         private UserControlMyPage userControlMyPage;
 
-        public UserControlBooks _UserControlBooks
-        {
-            get => userControlBooks;
-            set => userControlBooks = value;
-        }
-
-        public UserControlMusicCDs _UserControlMusicCDs
-        {
-            get => userControlMusicCDs;
-            set => userControlMusicCDs = value;
-        }
-
-        public UserControlMagazines _UserControlMagazines
-        {
-            get => UserControlMagazines;
-            set => UserControlMagazines = value;
-        }
-
-        public UserControlShoppingCart _UserControlShoppingCart
-        {
-            get => userControlShoppingCart;
-            set => userControlShoppingCart = value;
-        }
 
         public UserControlMyPage _UserControlMyPage
         {
@@ -67,16 +45,19 @@ namespace OnlineBookStore
         {
             InitializeComponent();
             mainPage = this;
-            userControlBooks = new UserControlBooks();
-            userControlMusicCDs = new UserControlMusicCDs();
-            UserControlMagazines = new UserControlMagazines();
-            userControlShoppingCart = new UserControlShoppingCart();
-            userControlProductDetails = UserControlProductDetails.CreateProductDetails();
-            userControlMusicCDDetail = UserControlMusicCDDetail.CreateMusicCDDeatils();
-            userControlMagazineDetails = UserControlMagazineDetails.CreateMagazineDetails();
-            userControlChangeInformations = new UserControlChangeInformations();
-            userControlMyPage = UserControlMyPage.CreateMyPage();
-        }
+           factory = new ProductFactory();
+         userControlBooks = UserControlBooks.CreateControlBooks();
+        userControlMusicCDs = UserControlMusicCDs.CreateControlCDs();
+       UserControlMagazines = UserControlMagazines.CreateControlMagazines();
+        userControlShoppingCart = UserControlShoppingCart.Instance();
+
+        userControlProductDetails = UserControlProductDetails.CreateProductDetails();
+       userControlMusicCDDetail = UserControlMusicCDDetail.CreateMusicCDDeatils();
+       userControlMagazineDetails = UserControlMagazineDetails.CreateMagazineDetails();
+        userControlChangeInformations = new UserControlChangeInformations();
+        userControlMyPage = UserControlMyPage.CreateMyPage();
+
+    }
 
         private void pictureBoxExit_Click(object sender, EventArgs e)
         {
@@ -95,7 +76,7 @@ namespace OnlineBookStore
             userControlMyPage.Visible = false;
             userControlChangeInformations.Visible = false;
             userControlBooks.DeleteBook();
-            userControlBooks.CreateBook();
+            factory.CreateProduct("Book");
 
             this.panelProductDisplay.Controls.Add(userControlBooks);
         }
@@ -131,7 +112,7 @@ namespace OnlineBookStore
             userControlChangeInformations.Visible = false;
 
             UserControlMagazines.DeleteMagazine();
-            UserControlMagazines.CreateMagazine();
+            factory.CreateProduct("Magazine");
 
             this.panelProductDisplay.Controls.Add(UserControlMagazines);
         }
@@ -164,7 +145,7 @@ namespace OnlineBookStore
             userControlChangeInformations.Visible = false;
             userControlShoppingCart.Visible = true;
 
-            userControlShoppingCart.ListCart();
+            userControlShoppingCart.ShoppingCart.ListCart();
             this.panelProductDisplay.Controls.Add(userControlShoppingCart);
         }
     }

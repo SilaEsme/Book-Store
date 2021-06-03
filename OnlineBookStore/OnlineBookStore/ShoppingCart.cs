@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 
 namespace OnlineBookStore
 {
-    internal class ShoppingCart
+    public class ShoppingCart
     {
         private Customer customer = Customer.CreateCustomer();
         private List<ItemToPurchase> list = new List<ItemToPurchase>();
+       
 
         private enum PaymentType
         { cash, CreditCard }
@@ -18,6 +21,46 @@ namespace OnlineBookStore
         {
             get => list;
         }
+        private void GetList()
+        {
+            SqlCommand command = new SqlCommand("SELECT ProductName, Price, Amount, ProductType FROM dbo.ShoppingCart where Username = '" + Customer.CreateCustomer().userInfo.Username + "'", Database.CreateSingle().Sqlconnection);
+            Database.CreateSingle().Sqlconnection.Open();
+            SqlDataReader dr = command.ExecuteReader();
+
+            while (dr.Read())
+            {
+                ProductFactory factory = new ProductFactory();
+                Product product = factory.getProduct(dr.GetString(3));
+                ItemToPurchase itemToPurchase = new ItemToPurchase();
+                product.ProductName = dr.GetString(0);
+                product.ProductPrice = dr.GetString(1);
+                itemToPurchase.Product = product;
+                itemToPurchase.Quantity = dr.GetString(2);
+                AddProduct(itemToPurchase);
+            }
+            Database.CreateSingle().Sqlconnection.Close();
+        }
+
+        public void ListCart()
+        {
+            UserControlShoppingCart userControlShoppingCart = UserControlShoppingCart.Instance();
+            List.Clear();
+            userControlShoppingCart.flowLayoutPanelProducts.Controls.Clear();
+            GetList();
+            double totalprice = 0;
+            int totalamount = 0;
+            foreach (var item in List)
+            {
+                UserControlShoppingCartItem cartItem = new UserControlShoppingCartItem();
+                cartItem.SetLabel(item.Product.ProductName, item.Product.ProductPrice, item.Quantity);
+                userControlShoppingCart.flowLayoutPanelProducts.Controls.Add(cartItem);
+
+                totalprice += Double.Parse(item.Product.ProductPrice) * Int32.Parse(item.Quantity);
+                totalamount += Int32.Parse(item.Quantity);
+            }
+            userControlShoppingCart.SetLabelPrice(totalprice.ToString().Replace(',', '.'));
+            userControlShoppingCart.SetLabelAmount(totalamount.ToString());
+        }
 
         public void AddProduct(ItemToPurchase item)
         {
@@ -27,6 +70,19 @@ namespace OnlineBookStore
         public void RemoveProduct(ItemToPurchase item)
         {
             list.Remove(item);
+        }
+        public void ClearCart()
+        {
+            UserControlShoppingCart userControlShoppingCart = UserControlShoppingCart.Instance();
+            List.Clear();
+            userControlShoppingCart.flowLayoutPanelProducts.Controls.Clear();
+            userControlShoppingCart.SetLabelAmount("0");
+            userControlShoppingCart.SetLabelPrice("0");
+
+            SqlCommand command = new SqlCommand("delete from shoppingcart FROM dbo.ShoppingCart where Username = '" + Customer.CreateCustomer().userInfo.Username + "'", Database.CreateSingle().Sqlconnection);
+            Database.CreateSingle().Sqlconnection.Open();
+            command.ExecuteNonQuery();
+            Database.CreateSingle().Sqlconnection.Close();
         }
 
         public void PlaceOrder()

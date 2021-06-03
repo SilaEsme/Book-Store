@@ -6,12 +6,24 @@ namespace OnlineBookStore
 {
     public partial class UserControlMusicCDs : UserControl
     {
-        private UserControlMusicCD userControlMusicCD = new UserControlMusicCD();
-
-        public UserControlMusicCDs()
+        public FlowLayoutPanel panel
         {
+            get => flowLayoutPanel_productDisplay;
+        }
+        private static UserControlMusicCDs controlMusicCDs;
+        public static UserControlMusicCDs CreateControlCDs()
+        {
+            if (controlMusicCDs == null)
+            {
+                controlMusicCDs = new UserControlMusicCDs();
+            }
+            return controlMusicCDs;
+        }
+
+        protected UserControlMusicCDs()
+        {
+            controlMusicCDs = this;
             InitializeComponent();
-            //this.CreateMusicCD();
         }
 
         public void CreateMusicCD()

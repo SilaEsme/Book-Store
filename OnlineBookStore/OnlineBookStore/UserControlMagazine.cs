@@ -55,10 +55,10 @@ namespace OnlineBookStore
 
         private void btnReadMore_Click(object sender, EventArgs e)
         {
-            FormMainPage.Instance()._UserControlBooks.Visible = false;
-            FormMainPage.Instance()._UserControlMusicCDs.Visible = false;
-            FormMainPage.Instance()._UserControlMagazines.Visible = false;
-            FormMainPage.Instance()._UserControlShoppingCart.Visible = false;
+            UserControlBooks.CreateControlBooks().Visible = false;
+            UserControlMusicCDs.CreateControlCDs().Visible = false;
+            UserControlMagazines.CreateControlMagazines().Visible = false;
+            UserControlShoppingCart.Instance().Visible = false;
 
             userControlMagazineDetails.SetMagazineInfo(magazine.ProductName, magazine.Issue, magazine.ProductPrice,
             magazine._TypeMagazine);

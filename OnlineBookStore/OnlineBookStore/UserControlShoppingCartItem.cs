@@ -9,7 +9,7 @@ namespace OnlineBookStore
 {
     public partial class UserControlShoppingCartItem : UserControl
     {
-        private UserControlShoppingCart userControlShoppingCart = UserControlShoppingCart.CreateShoppingCart();
+        private UserControlShoppingCart userControlShoppingCart = UserControlShoppingCart.Instance();
 
         public UserControlShoppingCartItem()
         {
@@ -22,10 +22,8 @@ namespace OnlineBookStore
             lblPrice.Text = price;
             lblTotalAmount.Text = amount;
 
-            price = lblPrice.Text.Replace('.', ',');
             lblTotalPrice.Text = (Double.Parse(price) * Int32.Parse(amount)).ToString();
             lblTotalPrice.Text = lblTotalPrice.Text.Replace(',', '.');
-            lblPrice.Text = price;
 
             string producttype = "";
             Database database = Database.CreateSingle();

@@ -115,3 +115,30 @@ C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\Onl
 C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.CoreCompileInputs.cache
 C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.exe
 C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.pdb
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\bin\Debug\OnlineBookStore.exe.config
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\bin\Debug\OnlineBookStore.exe
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\bin\Debug\OnlineBookStore.pdb
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.AssemblyReference.cache
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormLogin.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormMainPage.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormShoppingCart.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.Properties.Resources.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormSignUp.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlBook.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlPayment.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlProductDetails.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlBooks.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlChangeInformations.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMagazine.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMagazineDetails.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMagazines.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMusicCD.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMusicCDDetail.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMusicCDs.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyPage.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlShoppingCart.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlShoppingCartItem.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.GenerateResource.cache
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.CoreCompileInputs.cache
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.exe
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.pdb
