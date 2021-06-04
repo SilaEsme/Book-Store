@@ -109,7 +109,6 @@ namespace OnlineBookStore
             this.label1.TabIndex = 73;
             this.label1.Text = "₺";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblTL
             // 
@@ -120,7 +119,6 @@ namespace OnlineBookStore
             this.lblTL.TabIndex = 72;
             this.lblTL.Text = "₺";
             this.lblTL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTL.Click += new System.EventHandler(this.lblTL_Click);
             // 
             // lblTotalAmount
             // 
@@ -143,7 +141,6 @@ namespace OnlineBookStore
             this.lblTotalPrice.TabIndex = 70;
             this.lblTotalPrice.Text = "500";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTotalPrice.Click += new System.EventHandler(this.lblTotalPrice_Click);
             // 
             // lblTotalPriceH
             // 
@@ -166,7 +163,6 @@ namespace OnlineBookStore
             this.lblPrice.TabIndex = 68;
             this.lblPrice.Text = "100";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPrice.Click += new System.EventHandler(this.lblPrice_Click);
             // 
             // lblPriceH
             // 
@@ -178,7 +174,6 @@ namespace OnlineBookStore
             this.lblPriceH.TabIndex = 67;
             this.lblPriceH.Text = "Price:";
             this.lblPriceH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblPriceH.Click += new System.EventHandler(this.lblPriceH_Click);
             // 
             // lblName
             // 
@@ -190,7 +185,6 @@ namespace OnlineBookStore
             this.lblName.TabIndex = 66;
             this.lblName.Text = "Validenin Günlüğü";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // lblNameH
             // 
@@ -202,7 +196,6 @@ namespace OnlineBookStore
             this.lblNameH.TabIndex = 65;
             this.lblNameH.Text = "Name:";
             this.lblNameH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblNameH.Click += new System.EventHandler(this.lblNameH_Click);
             // 
             // UserControlShoppingCartItem
             // 

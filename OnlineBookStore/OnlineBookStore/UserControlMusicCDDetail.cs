@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+*  @author  : Zeynep Gürlüzer
+*  @number  : 152120191050
+*  @mail    : zeyneopgurluzer0@gmail.com
+*  @date    : 02.06.21
+*  @brief   : It's for the read details of the product.
+*/
+using System;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -15,14 +22,23 @@ namespace OnlineBookStore
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This function is for implement Singleton Pattern.
+        /// </summary>
+        /// <returns>Non Null UserControlMusicCDDetail object</returns>
         public static UserControlMusicCDDetail CreateMusicCDDeatils()
         {
             if (userControlMusicCDDetail == null)
                 userControlMusicCDDetail = new UserControlMusicCDDetail();
             return userControlMusicCDDetail;
         }
-
+        /// <summary>
+        /// This function sets products information
+        /// </summary>
+        /// <param name="name">This is the name of the MusicCD</param>
+        /// <param name="Singer">This is the name of the Singer</param>
+        /// <param name="Price">this is price of the cd</param>
+        /// <param name="type">This is the type of the MusicCD</param>
         public void SetMusicCDInfo(string name, string Singer, string Price,
          typeCD type)
         {
@@ -55,7 +71,11 @@ namespace OnlineBookStore
                 }
             }
         }
-
+        /// <summary>
+        /// This function adds product to cart.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_AddtoCart_Click(object sender, System.EventArgs e)
         {
             Database.CreateSingle().Sqlconnection.Open();

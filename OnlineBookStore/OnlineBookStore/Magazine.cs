@@ -1,7 +1,21 @@
-﻿namespace OnlineBookStore
+﻿/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 01.06.21
+*  @brief   : 
+*/
+namespace OnlineBookStore
 {
+    /// <summary>
+    /// This is enum class.
+    /// This Enum class for seperate Magazine' types.
+    /// </summary>
     public enum typeMagazine { Culture, Technology, Science, Geography, Caricature, Kids, Society, Art, Entertainment, Other }
-
+    /// <summary>
+    /// This class is type of Product. It's for Magazines' informations.
+    /// It includes magazine's informations and operations.
+    /// </summary>
     public class Magazine : Product
     {
         private string productName, productPrice;
@@ -14,6 +28,9 @@
             set => TypeMagazine = value;
         }
 
+        /// <summary>
+        /// This is constructor.
+        /// </summary>
         public Magazine()
         {
         }

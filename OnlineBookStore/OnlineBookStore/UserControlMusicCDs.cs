@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+*  @author  : Sıla Eşme
+*  @number  : 152120181004
+*  @mail    : silaesme@gmail.com
+*  @date    : 03.06.21
+*  @brief   : It's the user control that contains little UserControlMusicCD.
+*/
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -11,6 +18,10 @@ namespace OnlineBookStore
             get => flowLayoutPanel_productDisplay;
         }
         private static UserControlMusicCDs controlMusicCDs;
+        /// <summary>
+        /// This function is for implement Singleton Pattern.
+        /// </summary>
+        /// <returns>Non Null UserControlMusicCDs object</returns>
         public static UserControlMusicCDs CreateControlCDs()
         {
             if (controlMusicCDs == null)
@@ -19,37 +30,17 @@ namespace OnlineBookStore
             }
             return controlMusicCDs;
         }
-
+        /// <summary>
+        /// This is constructor.
+        /// </summary>
         protected UserControlMusicCDs()
         {
             controlMusicCDs = this;
             InitializeComponent();
         }
-
-        public void CreateMusicCD()
-        {
-            SqlCommand command = new SqlCommand("SELECT * FROM Music_CDs", Database.CreateSingle().Sqlconnection);
-            Database.CreateSingle().Sqlconnection.Open();
-            SqlDataReader dr = command.ExecuteReader();
-
-            while (dr.Read())
-            {
-                MusicCD musicCD = new MusicCD();
-
-                UserControlMusicCD userControlMusicCD = new UserControlMusicCD();
-                userControlMusicCD.SetLabelMusicCD(dr.GetString(0), dr.GetString(3));
-
-                flowLayoutPanel_productDisplay.Controls.Add(userControlMusicCD);
-
-                musicCD.ProductName = dr.GetString(0);
-                musicCD.Singer = dr.GetString(1);
-                musicCD.ProductPrice = dr.GetString(3);
-                musicCD.Type = (typeCD)Enum.Parse(typeof(typeCD), dr.GetString(2));
-                userControlMusicCD._musicCD = musicCD;
-            }
-            Database.CreateSingle().Sqlconnection.Close();
-        }
-
+        /// <summary>
+        /// This function clears panel that owns.
+        /// </summary>
         public void DeleteMusicCD()
         {
             flowLayoutPanel_productDisplay.Controls.Clear();

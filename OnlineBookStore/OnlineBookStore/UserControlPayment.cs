@@ -8,16 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 03.06.21
+*  @brief   : It's used for payment options for ordered items.
+*/
 namespace OnlineBookStore
 {
+    /// <summary>
+    /// UserControlPayment Class is used for payment options for ordered items.
+    /// </summary>
     public partial class UserControlPayment : UserControl
     {
+        public bool flag = false;
+
         ShoppingCart ShoppingCart = ShoppingCart.CreateShoppingCart();
         Customer customer = Customer.CreateCustomer();
         UserControlMyOrders userControlMyOrders = UserControlMyOrders.CreateUserControlMyORders();
+       
         private static UserControlPayment userControlPayment;
-        public bool flag = false, flag2 = false;
+        /// <summary>
+        /// CreateUserControlPayment is a singleton design pattern for UserControlPayment.
+        /// </summary>
+        /// <returns>returns existing userControlPayment</returns>
         public static UserControlPayment CreateUserControlPayment()
         {
             if (userControlPayment == null)
@@ -25,18 +40,22 @@ namespace OnlineBookStore
             return userControlPayment;
 
         }
+        /// <summary>
+        /// Constructor of userControlPayment class.
+        /// </summary>
         public UserControlPayment()
         {
             InitializeComponent();
         }
-
+        
         private void UserControlPayment_Load(object sender, EventArgs e)
         {
             UserControlShoppingCart UserControlShoppingCart = UserControlShoppingCart.Instance();
             lblTotalProduct.Text = UserControlShoppingCart.GetLabelPrice();
-
-
         }
+        /// <summary>
+        /// CalculateTotal function is calculates the installments of credit card.
+        /// </summary>
         public void CalculateTotal()
         {
             UserControlShoppingCart UserControlShoppingCart = UserControlShoppingCart.Instance();
@@ -51,7 +70,11 @@ namespace OnlineBookStore
             lblSix.Text = Math.Round((Double.Parse(lblFinalTotal.Text) /6), 2).ToString();
 
         }
-       
+        /// <summary>
+        /// btnPurchaseNow_Click allows user to create an order if all the informations is filled correctly.Function adds the ordered items on database and My orders tab.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPurchaseNow_Click(object sender, EventArgs e)
         {
             flag = true;
@@ -104,38 +127,50 @@ namespace OnlineBookStore
 
         }
 
+        /// <summary>
+        /// Sets Radio buttons if its cheched and rearranges the amount.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButtonYutici_CheckedChanged(object sender, EventArgs e)
         {
             lblCargo.Text = "11,90";
             CalculateTotal();
         }
-
+        /// <summary>
+        /// Sets Radio buttons if its cheched and rearranges the amount.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButtonAras_CheckedChanged_1(object sender, EventArgs e)
         {
             lblCargo.Text = "8,50";
             CalculateTotal();
         }
 
-
+        /// <summary>
+        /// Deletes a tab's informations if the other tab is selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tabControlCredit_SelectedIndexChanged(object sender, EventArgs e)
         {
-             if(tabControlCredit.SelectedTab==tabPageCash)
+            if(tabControlCredit.SelectedTab==tabPageCash)
             {
-                textBoxCreditNum.Text = "";
-                textBoxNameCredit.Text = "";
-                textBoxCVV.Text = "";
-                comboBoxYear.Text = "";
-                comboBoxMonth.Text = "";
+            textBoxCreditNum.Text = "";
+            textBoxNameCredit.Text = "";
+            textBoxCVV.Text = "";
+            comboBoxYear.Text = "";
+            comboBoxMonth.Text = "";
             }
             else if (tabControlCredit.SelectedTab ==tabPageCreditCard)
             {
-                textBoxCashBankNo.Text = "";
-                textBoxCardNme.Text = "";
-                textBoxCashCVV.Text = "";
-                comboBoxCashMonth.Text = "";
-                comboBoxCashYear.Text = "";
-            }
-          
+            textBoxCashBankNo.Text = "";
+            textBoxCardNme.Text = "";
+            textBoxCashCVV.Text = "";
+            comboBoxCashMonth.Text = "";
+            comboBoxCashYear.Text = "";
+            }    
         }
     }
 }

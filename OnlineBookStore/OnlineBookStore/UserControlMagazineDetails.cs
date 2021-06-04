@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+*  @author  : Zeynep Gürlüzer
+*  @number  : 152120191050
+*  @mail    : zeyneopgurluzer0@gmail.com
+*  @date    : 02.06.21
+*  @brief   : It's for the read details of the product.
+*/
+using System;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -10,14 +17,23 @@ namespace OnlineBookStore
     public partial class UserControlMagazineDetails : UserControl
     {
         private static UserControlMagazineDetails userControlMagazineDetails;
-
+        /// <summary>
+        /// This function is for implement Singleton Pattern.
+        /// </summary>
+        /// <returns>Non Null UserControlMagazineDetails object</returns>
         public static UserControlMagazineDetails CreateMagazineDetails()
         {
             if (userControlMagazineDetails == null)
                 userControlMagazineDetails = new UserControlMagazineDetails();
             return userControlMagazineDetails;
         }
-
+        /// <summary>
+        /// This function sets products information
+        /// </summary>
+        /// <param name="name">This is the name of the Magazine</param>
+        /// <param name="Issue">This is the issue of the Magazine</param>
+        /// <param name="Price">this is price of the Magazine</param>
+        /// <param name="type">This is the type of the Magazine</param>
         public void SetMagazineInfo(string name, string Issue, string Price,
        typeMagazine type)
         {
@@ -50,12 +66,18 @@ namespace OnlineBookStore
                 }
             }
         }
-
+        /// <summary>
+        /// This is constructor
+        /// </summary>
         public UserControlMagazineDetails()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This function adds product to cart.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_AddtoCart_Click(object sender, System.EventArgs e)
         {
             Database.CreateSingle().Sqlconnection.Open();

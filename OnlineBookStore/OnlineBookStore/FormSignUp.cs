@@ -1,4 +1,19 @@
-﻿using System;
+﻿/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 01.06.21
+*  @brief   : It's for sign up.
+*/
+/**
+*  @author  : Zeynep Gürlüzer
+*  @number  : 152120191050
+*  @mail    : zeyneopgurluzer0@gmail.com
+*  @date    : 02.06.21
+*  @brief   : It's for sign up.
+*/
+
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -6,19 +21,27 @@ namespace OnlineBookStore
 {
     public partial class FormSignUp : Form
     {
-        public SqlCommand Command { get; private set; }
-
+        /// <summary>
+        /// This function is constructor.
+        /// </summary>
         public FormSignUp()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This function handles Sign Up button click event.
+        /// It triggers when sign up button clicked.
+        /// It checks informations are correct and if is, write down them to the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_signup_Click(object sender, EventArgs e)
         {
+            SqlCommand Command;
             bool flag = false;
             HashCriptology hashCriptology = new HashCriptology();
             string sifre = txtPassword.Text;
-            hashCriptology.MD5Sifrele(ref sifre);
+            hashCriptology.MD5Cyrpt(ref sifre);
             Database database = Database.CreateSingle();
             database.GetConnection();
 
@@ -71,7 +94,13 @@ namespace OnlineBookStore
                 MessageBox.Show("Please fill all the blanks!", "Invalid");
             }
         }
-
+        /// <summary>
+        /// This function handles picturebox click event.
+        /// It triggers when picturebox clicked.
+        /// It closes the application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 01.06.21
+*  @brief   : It's the user control of the book.
+*/
+using System;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -17,12 +24,18 @@ namespace OnlineBookStore
             get => book;
             set => book = value;
         }
-
+        /// <summary>
+        /// This is constructor.
+        /// </summary>
         public UserControlBook()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This function reads the relevant database table and sets labels and pictute box it has.
+        /// </summary>
+        /// <param name="name">Name of the book</param>
+        /// <param name="Price">Price of the book</param>
         public void SetLabelBook(string name, string Price)//küçük booklar için
         {
             Database database = Database.CreateSingle();
@@ -52,7 +65,13 @@ namespace OnlineBookStore
                 }
             }
         }
-
+        /// <summary>
+        /// This function handles read more button click event.
+        /// It triggers when read more button clicked.
+        /// It  directs user to UserControl that contains informations of book and sets informations to the user control
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReadMore_Click(object sender, EventArgs e)
         {
             

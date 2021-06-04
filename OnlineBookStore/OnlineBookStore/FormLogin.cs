@@ -1,4 +1,18 @@
-﻿using System;
+﻿/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 01.06.21
+*  @brief   : It is for login.
+*/
+/**
+*  @author  : Zeynep Gürlüzer
+*  @number  : 152120191050
+*  @mail    : zeyneopgurluzer0@gmail.com
+*  @date    : 02.06.21
+*  @brief   : It is for login.
+*/
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -9,17 +23,26 @@ namespace OnlineBookStore
         private Customer customer = Customer.CreateCustomer();
         private FormMainPage main;
 
+        /// <summary>
+        /// This function is Constructor.
+        /// </summary>
         public FormLogin()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This function handles Login Click event.
+        /// It triggers when login button clicked.
+        /// It checks username and password that entered is valid or not. If valid, customer can reach Main Page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_login_Click(object sender, EventArgs e)
         {
             bool flag = false;
             HashCriptology hashCriptology = new HashCriptology();
             string sifre = txtPassword.Text;
-            hashCriptology.MD5Sifrele(ref sifre);
+            hashCriptology.MD5Cyrpt(ref sifre);
             Database database = Database.CreateSingle();
             database.GetConnection();
 
@@ -55,14 +78,26 @@ namespace OnlineBookStore
                 this.Hide();
             }
         }
-
+        /// <summary>
+        /// This function handles Sign Up button click event.
+        /// It triggers when sign up button clicked.
+        /// It directs user to sign up form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void label_signup_Click(object sender, EventArgs e)
         {
             FormSignUp form = new FormSignUp();
             form.Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// This function handles picturebox click event.
+        /// It triggers when picturebox clicked.
+        /// It closes the application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();

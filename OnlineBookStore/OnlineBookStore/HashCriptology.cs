@@ -1,4 +1,11 @@
-﻿using System.Security.Cryptography;
+﻿/**
+*  @author  : Zeynep Gürlüzer
+*  @number  : 152120191050
+*  @mail    : zeyneopgurluzer0@gmail.com
+*  @date    : 02.06.21
+*  @brief   : It's util for cyript the password.
+*/
+using System.Security.Cryptography;
 using System.Text;
 
 namespace OnlineBookStore
@@ -7,24 +14,29 @@ namespace OnlineBookStore
     {
         public StringBuilder sb = new StringBuilder();
 
-        public void MD5Sifrele(ref string sifrelenecekMetin)
+        /// <summary>
+        /// This function cyrpts given string.
+        /// </summary>
+        /// <param name="password"></param>
+        public void MD5Cyrpt(ref string password)
         {
-            // MD5CryptoServiceProvider sınıfının bir örneğini oluşturduk.
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            //Parametre olarak gelen veriyi byte dizisine dönüştürdük.
-            byte[] dizi = Encoding.UTF8.GetBytes(sifrelenecekMetin);
-            //dizinin hash'ini hesaplattık.
+
+            byte[] dizi = Encoding.UTF8.GetBytes(password);
+
             dizi = md5.ComputeHash(dizi);
-            //Hashlenmiş verileri depolamak için StringBuilder nesnesi oluşturduk.
-            //Her byte'i dizi içerisinden alarak string türüne dönüştürdük.
 
             foreach (byte ba in dizi)
             {
                 sb.Append(ba.ToString("x2").ToLower());
             }
-            sifrelenecekMetin = sb.ToString();
+            password = sb.ToString();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>Cyrpted string</returns>
         public string getPass()
         {
             return sb.ToString();

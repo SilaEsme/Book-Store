@@ -4,18 +4,35 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-
+/**
+*  @author  : Zeynep Gürlüzer
+*  @number  : 152120191050
+*  @mail    : zeyneopgurluzer0@gmail.com
+*  @date    : 02.06.21
+*  @brief   : It's for setting properties and buttons of shopping cart item.
+*/
 namespace OnlineBookStore
 {
+    /// <summary>
+    /// UserControlShoppingCartItem is used for setting properties and buttons of shopping cart item.
+    /// </summary>
     public partial class UserControlShoppingCartItem : UserControl
     {
         private UserControlShoppingCart userControlShoppingCart = UserControlShoppingCart.Instance();
 
+        /// <summary>
+        /// Constructor of UserControlShoppingCartItem class.
+        /// </summary>
         public UserControlShoppingCartItem()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// SetLabel function sets the labels of the shopping item , gets the path of the image of item from database and selects from project image folder by product type.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="price"></param>
+        /// <param name="amount"></param>
         public void SetLabel(string name, string price, string amount)
         {
             lblName.Text = name;
@@ -108,7 +125,11 @@ namespace OnlineBookStore
                 }
             }
         }
-
+        /// <summary>
+        /// btnIncrease_Click function is used for increasing the number of the item on shopping cart and database. Function also sets the labels again depends on new amount.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnIncrease_Click(object sender, EventArgs e)
         {
             SqlCommand command = new SqlCommand("update dbo.shoppingcart set Amount=@amount WHERE Productname = @name and username=@username", Database.CreateSingle().Sqlconnection);
@@ -135,7 +156,11 @@ namespace OnlineBookStore
             lblTotalPrice.Text = (Double.Parse(lblTotalAmount.Text) * Double.Parse(lblPrice.Text.Replace('.', ','))).ToString();
 
         }
-
+        /// <summary>
+        /// btnDelete_Click function is used for deleting the item on shopping cart and database. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int TempAmount = 0;
@@ -158,7 +183,11 @@ namespace OnlineBookStore
             command.ExecuteNonQuery();
             Database.CreateSingle().Sqlconnection.Close();
         }
-
+        /// <summary>
+        /// btnDelete_Click function is used for decreasing the number of the item on shopping cart and database. Function also sets the labels again depends on new amount.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDecrase_Click(object sender, EventArgs e)
         {
             if (lblTotalAmount.Text == "1")
@@ -193,41 +222,6 @@ namespace OnlineBookStore
             }
         }
 
-      
-
-        private void lblTL_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTotalPrice_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPrice_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPriceH_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNameH_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

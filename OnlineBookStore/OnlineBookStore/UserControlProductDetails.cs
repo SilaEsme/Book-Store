@@ -4,25 +4,50 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-
+/**
+*  @author  : Zeynep Gürlüzer
+*  @number  : 152120191050
+*  @mail    : zeyneopgurluzer0@gmail.com
+*  @date    : 03.06.21
+*  @brief   : It's for displaying details and images of the books. It also allows customers to add product into their shopping carts.
+*/
 namespace OnlineBookStore
 {
+    /// <summary>
+    /// UserControlProductDetails class is used for displaying details and images of the books. It also allows customers to add product into their shopping carts.
+    /// </summary>
     public partial class UserControlProductDetails : UserControl
     {
         private static UserControlProductDetails userControlProductDetails;
 
+        /// <summary>
+        /// CreateProductDetails function is a singleton design pattern.Only creates new object if its not created before.
+        /// </summary>
+        /// <returns>returns existing userControlProductDetails</returns>
         public static UserControlProductDetails CreateProductDetails()
         {
             if (userControlProductDetails == null)
                 userControlProductDetails = new UserControlProductDetails();
             return userControlProductDetails;
         }
-
+        /// <summary>
+        /// Constructor of userControlProductDetails Class.
+        /// </summary>
         public UserControlProductDetails()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// SetBookInfo function sets the informations of the book according the parameters and adds an image by reading the path from database.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="author"></param>
+        /// <param name="publisher"></param>
+        /// <param name="page"></param>
+        /// <param name="ISBN"></param>
+        /// <param name="price"></param>
+        /// <param name="cover"></param>
+        /// <param name="type"></param>
         public void SetBookInfo(string name, string author, string publisher,
         string page, string ISBN, string price, string cover, _type type)
         {
@@ -60,6 +85,11 @@ namespace OnlineBookStore
             }
         }
 
+        /// <summary>
+        /// btn_AddtoCart_Click function adds the selected item to shopping cart and database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_AddtoCart_Click(object sender, System.EventArgs e)
         {
             Database.CreateSingle().Sqlconnection.Open();

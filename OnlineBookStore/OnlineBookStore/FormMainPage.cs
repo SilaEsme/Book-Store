@@ -1,4 +1,25 @@
-﻿using System;
+﻿/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 01.06.21
+*  @brief   : It's Main Form of the app.
+*/
+/**
+*  @author  : Sıla Eşme
+*  @number  : 152120181004
+*  @mail    : silaesme@gmail.com
+*  @date    : 03.06.21
+*  @brief   : It's the implementation of Factory Design Pattern..
+*/
+/**
+*  @author  : Zeynep Gürlüzer
+*  @number  : 152120191050
+*  @mail    : zeyneopgurluzer0@gmail.com
+*  @date    : 02.06.21
+*  @brief   : It's for the customers change informations of themselves.
+*/
+using System;
 using System.Windows.Forms;
 
 namespace OnlineBookStore
@@ -31,7 +52,10 @@ namespace OnlineBookStore
             get => userControlChangeInformations;
             set => userControlChangeInformations = value;
         }
-
+        /// <summary>
+        /// This function is for implement Singleton Pattern.
+        /// </summary>
+        /// <returns>Non Null FormMainPage object.</returns>
         public static FormMainPage Instance()
         {
             if (mainPage == null)
@@ -41,6 +65,10 @@ namespace OnlineBookStore
             return mainPage;
         }
 
+        /// <summary>
+        /// This function is constructor.
+        /// It Initialize components of form and creates intances of user controls.
+        /// </summary>
         public FormMainPage()
         {
             InitializeComponent();
@@ -60,11 +88,24 @@ namespace OnlineBookStore
             userControlMyOrders = UserControlMyOrders.CreateUserControlMyORders();
         }
 
+        /// <summary>
+        /// This function handles picturebox click event.
+        /// It triggers when picturebox clicked.
+        /// It closes the application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBoxExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// This function handles Books button click event.
+        /// It triggers when Books button clicked.
+        /// It directs user to UserControlBooks user control.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBooks_Click(object sender, EventArgs e)
         {
             userControlBooks.Visible = true;
@@ -84,7 +125,13 @@ namespace OnlineBookStore
 
             this.panelProductDisplay.Controls.Add(userControlBooks);
         }
-
+        /// <summary>
+        /// This function handles MusicCDs button click event.
+        /// It triggers when MusicCDs button clicked.
+        /// It directs user to UserControlMusicCDs user control.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMusicCDs_Click(object sender, EventArgs e)
         {
             userControlMusicCDs.Visible = true;
@@ -101,11 +148,17 @@ namespace OnlineBookStore
             userControlChangeInformations.Visible = false;
 
             userControlMusicCDs.DeleteMusicCD();
-            userControlMusicCDs.CreateMusicCD();
+            factory.CreateProduct("MusicCD");
 
             this.panelProductDisplay.Controls.Add(userControlMusicCDs);
         }
-
+        /// <summary>
+        /// This function handles Magazines button click event.
+        /// It triggers when Magazines button clicked.
+        /// It directs user to UserControlMagazines user control.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMagazines_Click(object sender, EventArgs e)
         {
             UserControlMagazines.Visible = true;
@@ -127,7 +180,13 @@ namespace OnlineBookStore
 
             this.panelProductDisplay.Controls.Add(UserControlMagazines);
         }
-
+        /// <summary>
+        /// This function handles MyPage button click event.
+        /// It triggers when MyPage button clicked.
+        /// It directs user to UserControlMyPage user control.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMyPage_Click(object sender, EventArgs e)
         {
             UserControlMagazines.Visible = false;
@@ -147,7 +206,13 @@ namespace OnlineBookStore
             userControlMyPage.SetLabelMyPage();
             this.panelProductDisplay.Controls.Add(userControlMyPage);
         }
-
+        /// <summary>
+        /// This function handles Books button click event.
+        /// It triggers when Books button clicked.
+        /// It directs user to UserControlBooks user control.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnShoppingCart_Click(object sender, EventArgs e)
         {
             UserControlMagazines.Visible = false;
@@ -167,18 +232,36 @@ namespace OnlineBookStore
             this.panelProductDisplay.Controls.Add(userControlShoppingCart);
         }
 
+        /// <summary>
+        /// This function handles Sign Out button click event.
+        /// It triggers when sign out button clicked.
+        /// It directs user to log in form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             FormLogin login = new FormLogin();
             login.Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// This function handles Form's load event.
+        /// It triggers when form loaded.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormMainPage_Load(object sender, EventArgs e)
         {
             btnBooks_Click(sender,e);
         }
-
+        /// <summary>
+        /// This function handles MyOrders button click event.
+        /// It triggers when MyOrders button clicked.
+        /// It directs user to UserControlMyOrders user control.
+        /// </summary>
+        /// <param name="sender"> </param>
+        /// <param name="e"> </param>
         private void btnMyOrders_Click(object sender, EventArgs e)
         {
 

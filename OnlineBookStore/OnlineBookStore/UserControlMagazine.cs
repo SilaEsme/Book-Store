@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 01.06.21
+*  @brief   : It's the user control of the magazine.
+*/
+using System;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -17,13 +24,19 @@ namespace OnlineBookStore
             get => magazine;
             set => magazine = value;
         }
-
+        /// <summary>
+        /// This is constructor.
+        /// </summary>
         public UserControlMagazine()
         {
             InitializeComponent();
         }
-
-        public void SetLabelMagazine(string name, string Price)//küçük booklar için
+        /// <summary>
+        /// This function reads the relevant database table and sets labels and pictute box it has.
+        /// </summary>
+        /// <param name="name">Name of the magazine</param>
+        /// <param name="Price">Price of the magazine</param>
+        public void SetLabelMagazine(string name, string Price)
         {
             Database database = Database.CreateSingle();
             database.GetConnection();
@@ -52,7 +65,13 @@ namespace OnlineBookStore
                 }
             }
         }
-
+        /// <summary>
+        /// This function handles read more button click event.
+        /// It triggers when read more button clicked.
+        /// It  directs user to UserControl that contains informations of magazine and sets informations to the user control
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReadMore_Click(object sender, EventArgs e)
         {
             UserControlBooks.CreateControlBooks().Visible = false;

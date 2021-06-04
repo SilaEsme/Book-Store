@@ -1,16 +1,29 @@
-﻿namespace OnlineBookStore
+﻿/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 01.06.21
+*  @brief   : It's for customers' informations.
+*/
+namespace OnlineBookStore
 {
+
     public class Customer
     {
         private static Customer customer;
+
         private static int customerID;
         private string name;
         private string adress;
         private string email;
         private string surname;
+
         private UserInfo UserInfo = new UserInfo();
 
-
+        /// <summary>
+        /// This function is for implement Singleton Pattern.
+        /// </summary>
+        /// <returns>Non Null Customer object</returns>
         public static Customer CreateCustomer()
         {
             if (customer == null)
@@ -18,14 +31,13 @@
             return customer;
         }
 
+        /// <summary>
+        /// This function is Constructor.
+        /// </summary>
         protected Customer()
         {
         }
 
-        //public void SetUsernamePassword(string u,string p)
-        //{
-        //    userInfo.
-        //}
         public UserInfo userInfo
         {
             get => UserInfo;
@@ -60,18 +72,6 @@
         {
             get => email;
             set => email = value;
-        }
-
-        public void PrintCustomerDetails()
-        {
-        }
-
-        public void SaveCustomer()
-        {
-        }
-
-        public void PrintCustomerPurchases()
-        {
         }
     }
 }

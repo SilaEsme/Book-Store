@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 01.06.21
+*  @brief   : It's the user control of the cd.
+*/
+using System;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -11,12 +18,18 @@ namespace OnlineBookStore
     {
         private UserControlMusicCDDetail userControlMusicCDDetail = UserControlMusicCDDetail.CreateMusicCDDeatils();
         private MusicCD musicCD = new MusicCD();
-
+        /// <summary>
+        /// This is constructor.
+        /// </summary>
         public UserControlMusicCD()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This function reads the relevant database table and sets labels and pictute box it has.
+        /// </summary>
+        /// <param name="name">Name of the MusicCD</param>
+        /// <param name="Price">Price of the MusicCD</param>
         public void SetLabelMusicCD(string name, string Price)//küçük booklar için
         {
             lblName.Text = name;
@@ -52,7 +65,13 @@ namespace OnlineBookStore
             get => musicCD;
             set => musicCD = value;
         }
-
+        /// <summary>
+        /// This function handles read more button click event.
+        /// It triggers when read more button clicked.
+        /// It  directs user to UserControl that contains informations of MusicCD and sets informations to the user control
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReadMore_Click(object sender, EventArgs e)
         {
             UserControlBooks.CreateControlBooks().Visible = false;

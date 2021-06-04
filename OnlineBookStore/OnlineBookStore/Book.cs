@@ -1,7 +1,22 @@
-﻿namespace OnlineBookStore
+﻿/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 01.06.21
+*  @brief   : It's for books' informations.
+*/
+namespace OnlineBookStore
 {
-    public enum _type { Fiction, Classic, Story, TurkishClassic, Education, x }
+    /// <summary>
+    /// This is enum class.
+    /// This Enum class for seperate books' types.
+    /// </summary>
+    public enum _type { Fiction, Classic, Story, TurkishClassic, Education,}
 
+    /// <summary>
+    /// This class is type of Product. It's for books' informations.
+    /// It includes magazine's informations and operations.
+    /// </summary>
     public class Book : Product
     {
         private string productName, productPrice;
@@ -16,16 +31,16 @@
             ID++;
         }
 
-        public string Page
-        {
-            get => page;
-            set => page = value;
-        }
-
         public override string ProductPrice
         {
             get => productPrice;
             set => productPrice = value;
+        }
+
+        public string Page
+        {
+            get => page;
+            set => page = value;
         }
 
         public int BookID

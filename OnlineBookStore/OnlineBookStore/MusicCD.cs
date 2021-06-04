@@ -1,7 +1,21 @@
-﻿namespace OnlineBookStore
+﻿/**
+*  @author  : Sanem Yıldız Kavukoğlu
+*  @number  : 152120181043
+*  @mail    : sanemkavukoğlu420@gmail.com
+*  @date    : 01.06.21
+*  @brief   : 
+*/
+namespace OnlineBookStore
 {
+    /// <summary>
+    /// This is enum class.
+    /// This Enum class for seperate CDs' types.
+    /// </summary>
     public enum typeCD { Rock, Classical, Pop, Country, Jazz, Rap, Punk, Metal }
-
+    /// <summary>
+    /// This class is type of Product. It's for MusicCDs' informations.
+    /// It includes MusicCD's informations and operations.
+    /// </summary>
     public class MusicCD : Product
     {
         private string productName, productPrice;
@@ -15,7 +29,9 @@
             get => typecd;
             set => typecd = value;
         }
-
+        /// <summary>
+        /// This is constructor.
+        /// </summary>
         public MusicCD()
         {
         }

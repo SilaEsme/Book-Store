@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+*  @author  : Zeynep Gürlüzer
+*  @number  : 152120191050
+*  @mail    : zeyneopgurluzer0@gmail.com
+*  @date    : 02.06.21
+*  @brief   : It's for the customers change informations of themselves.
+*/
+using System;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -16,14 +23,15 @@ namespace OnlineBookStore
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This function brings customers information to the textbox and picturebox.
+        /// </summary>
         public void SetTextBoxInfo()
         {
             txtaddress.Text = customer.Adress;
             txtemail.Text = customer.Email;
             txtname.Text = customer.Name;
             txtsurname.Text = customer.Surname;
-            //txtusername.Text = customer.userInfo.Username;
             string imagename = "";
             var dirs = Directory.GetFiles(@"Profile Images", "*.*").Where(s => s.EndsWith(".png") || s.EndsWith(".jpg") || s.EndsWith(".jpeg"));
             SqlCommand command = new SqlCommand("SELECT ImagePath FROM dbo.Customer WHERE username = @username", Database.CreateSingle().Sqlconnection);
@@ -46,10 +54,13 @@ namespace OnlineBookStore
             }
         }
 
-       
+        /// <summary>
+        /// This function updates customer's profile picture.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUpdateImage_Click(object sender, System.EventArgs e)
         {
-            //save code
 
             DialogResult dgResult = openFileDialog1.ShowDialog();
             pictureBoxCustomer.ImageLocation = openFileDialog1.FileName;
@@ -62,7 +73,11 @@ namespace OnlineBookStore
                     System.IO.File.Copy(openFileDialog1.FileName, destinationPath);
             }
         }
-
+        /// <summary>
+        /// This function saves customer's changed profile picture.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, System.EventArgs e)
         {
             string filename = Path.GetFileName(openFileDialog1.FileName);
@@ -75,7 +90,11 @@ namespace OnlineBookStore
             Database.CreateSingle().Sqlconnection.Close();
             MessageBox.Show("The profile image is added.");
         }
-
+        /// <summary>
+        /// This function saves customer's informations that changed to the relevant database table.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUpdateInfo_Click(object sender, EventArgs e)
         {
             SqlCommand command = new SqlCommand("UPDATE Customer SET Name=@name, Surname=@surname,Adress=@adress,Email=@Email where username=@username", Database.CreateSingle().Sqlconnection);

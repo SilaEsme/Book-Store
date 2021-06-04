@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+*  @author  : Sıla Eşme
+*  @number  : 152120181004
+*  @mail    : silaesme@gmail.com
+*  @date    : 03.06.21
+*  @brief   : It's the implementation of Factory Design Pattern..
+*/
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -7,8 +14,13 @@ using System.Threading.Tasks;
 
 namespace OnlineBookStore
 {
-    class ProductFactory
+    public class ProductFactory
     {
+        /// <summary>
+        /// This function is creates different type of Products.
+        /// </summary>
+        /// <param name="ProductType"> Includes type of products as string</param>
+        /// <returns>Type of Product</returns>
         public Product getProduct(String ProductType)
         {
             if (ProductType == null)
@@ -30,6 +42,10 @@ namespace OnlineBookStore
 
             return null;
         }
+        /// <summary>
+        /// This function reads the information from the table according to the entered type and creates a product.
+        /// </summary>
+        /// <param name="ProductType"> Includes type of products as string</param>
         public void CreateProduct(String ProductType)
         {
             if (ProductType == "Book")

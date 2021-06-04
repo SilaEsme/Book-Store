@@ -4,9 +4,18 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-
+/**
+*  @author  : Sıla Eşme
+*  @number  : 152120181004
+*  @mail    : silaesme@gmail.com
+*  @date    : 03.06.21
+*  @brief   : It is used for customers to display their informations.
+*/
 namespace OnlineBookStore
 {
+    /// <summary>
+    /// UserControlMyPage is used for customers to display their informations.
+    /// </summary>
     public partial class UserControlMyPage : UserControl
     {
         private Customer customer = Customer.CreateCustomer();
@@ -35,19 +44,27 @@ namespace OnlineBookStore
             get => lblAddress.Text;
             set => lblAddress.Text = value;
         }
-
+        /// <summary>
+        /// CreateMyPage is a singleton design pattern for UserControlMyPage to be created just for once.
+        /// </summary>
+        /// <returns>returns existing userControlMyPage</returns>
         public static UserControlMyPage CreateMyPage()
         {
             if (userControlMyPage == null)
                 userControlMyPage = new UserControlMyPage();
             return userControlMyPage;
         }
+        /// <summary>
+        /// Constructor of UserControlMyPage.
+        /// </summary>
         protected UserControlMyPage()
         {
             userControlMyPage = this;
             InitializeComponent();
         }
-        
+        /// <summary>
+        /// SetLabelMyPage function sets the labels and images with customers informations by reading it from database.
+        /// </summary>
         public void SetLabelMyPage()
         {
             lblName.Text = customer.Name;
@@ -77,6 +94,11 @@ namespace OnlineBookStore
             }
         }
 
+        /// <summary>
+        /// Directs customer to the Change information page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUpdateInfo_Click(object sender, EventArgs e)
         {
             UserControlBooks.CreateControlBooks().Visible = false;
