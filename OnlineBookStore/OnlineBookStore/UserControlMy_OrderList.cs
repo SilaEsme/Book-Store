@@ -13,19 +13,12 @@ namespace OnlineBookStore
 {
     public partial class UserControlMy_OrderList : UserControl
     {
-        Order order;
-        public Order Order
-        {
-            set => order = value;
-        }
-
-        UserControlMyOrder userControlMyOrder = new UserControlMyOrder();
-        UserControlMyOrders userControlMyOrders = new UserControlMyOrders();
-        public  UserControlMy_OrderList()
+        UserControlMyOrders userControlMyOrders = UserControlMyOrders.CreateUserControlMyORders();
+        public UserControlMy_OrderList()
         {
             InitializeComponent();
         }
-        public void SetLabelOrder(string takipno,string Date,string total)
+        public void SetLabelOrder(string takipno, string Date, string total)
         {
             lblOrderNo.Text = takipno;
             lblDate.Text = Date;
@@ -33,12 +26,11 @@ namespace OnlineBookStore
         }
         private void btnViewDetails_Click(object sender, EventArgs e)
         {
-
-            userControlMyOrders.flowLayoutPanelOrderDetails.Controls.Add(userControlMyOrder);
-
-            //SqlCommand command = new SqlCommand("select ", Database.CreateSingle().SqlConnection);
-
-            //userControlMyOrder.SetLabelOrders()
+            foreach (var item in userControlMyOrders.flowLayoutPanelOrderDetails.Controls.OfType<UserControlMyOrder>())
+            {
+                item.Visible = false;
+            }
+            userControlMyOrders.CreateMyOrders(lblOrderNo.Text);
         }
     }
 }

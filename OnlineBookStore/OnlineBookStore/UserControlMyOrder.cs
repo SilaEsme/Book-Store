@@ -18,17 +18,14 @@ namespace OnlineBookStore
         {
             InitializeComponent();
         }
-       
-        public void SetLabelOrders(string name, string amount, string price)
-        {
-            Database database = Database.CreateSingle();
-            database.GetConnection();
 
+        public void SetLabelOrders(string name, string amount, string price, string no)
+        {
+            lblOrderNo.Text = no;
             lblName.Text = name;
             lblPrice.Text = price;
             lblTotalAmount.Text = amount;
             lblTotalPrice.Text = (Double.Parse(lblPrice.Text.Replace('.', ',')) * Double.Parse(lblTotalAmount.Text)).ToString();
-
         }
     }
 }

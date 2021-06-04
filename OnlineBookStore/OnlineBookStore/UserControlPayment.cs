@@ -54,35 +54,42 @@ namespace OnlineBookStore
        
         private void btnPurchaseNow_Click(object sender, EventArgs e)
         {
-            flag =true;
+            flag = true;
 
             if (radioButtonYutici.Checked == false && radioButtonAras.Checked == false)
             {
                 MessageBox.Show("Please Select a Cargo Company!", "Fail Order", MessageBoxButtons.OK);
-            }          
+            }
             else
             {
                 DateTime date = DateTime.Now;
                 Random rand = new Random();
                 int OrderNumber = rand.Next(10000, 999999);
-                //CLASS - name price quantity total
-                Order order = new Order(OrderNumber.ToString(),date.ToString());
 
-
-                //SQL
+                //SQL ORDERLİST
                 SqlCommand command = new SqlCommand("insert into orderlist (OrderNumber,OrderTime,OrderTotalPrice,username) values (@orderno,@ordertime,@orderTotalPrice,@username)", Database.CreateSingle().Sqlconnection);
 
                 command.Parameters.AddWithValue("@username", Customer.CreateCustomer().userInfo.Username);
                 command.Parameters.AddWithValue("@orderno", OrderNumber.ToString());
                 command.Parameters.AddWithValue("@OrderTime", date.ToString());
-                command.Parameters.AddWithValue("@orderTotalPrice",lblFinalTotal.Text);
+                command.Parameters.AddWithValue("@orderTotalPrice", lblFinalTotal.Text);
 
                 Database.CreateSingle().Sqlconnection.Open();
                 command.ExecuteNonQuery();
                 Database.CreateSingle().Sqlconnection.Close();
 
+                //SQL SHOPPINGCART
+                SqlCommand command2 = new SqlCommand("UPDATE shoppingcart SET OrderNo = @no WHERE username=@username and OrderNo is NULL", Database.CreateSingle().Sqlconnection);
+
+                command2.Parameters.AddWithValue("@no", OrderNumber.ToString());
+                command2.Parameters.AddWithValue("@username", Customer.CreateCustomer().userInfo.Username);
+
+                Database.CreateSingle().Sqlconnection.Open();
+                command2.ExecuteNonQuery();
+                Database.CreateSingle().Sqlconnection.Close();
+
                 MessageBox.Show("Your Order has been Created!", "New Order", MessageBoxButtons.OK);
-                ShoppingCart.ClearCart();
+                //ShoppingCart.ClearCart();
             }
 
         }

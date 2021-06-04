@@ -73,7 +73,7 @@ namespace OnlineBookStore
 
             if (read == false)//data yoktur yeni eklenecek
             {
-                SqlCommand command = new SqlCommand("INSERT INTO dbo.ShoppingCart VALUES (@name,@price,@amount,@username,@producttype)", Database.CreateSingle().Sqlconnection);
+                SqlCommand command = new SqlCommand("INSERT INTO dbo.ShoppingCart(Productname,price,amount,username,producttype) VALUES (@name,@price,@amount,@username,@producttype)", Database.CreateSingle().Sqlconnection);
                 command.Parameters.AddWithValue("@name", lblName.Text);
                 command.Parameters.AddWithValue("@price", lblPrice.Text);
                 command.Parameters.AddWithValue("@amount", "1");
@@ -114,6 +114,5 @@ namespace OnlineBookStore
             };
             t.Start();
         }
-        
     }
 }

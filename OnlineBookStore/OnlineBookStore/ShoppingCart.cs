@@ -29,7 +29,7 @@ namespace OnlineBookStore
         }
         private void GetList()
         {
-            SqlCommand command = new SqlCommand("SELECT ProductName, Price, Amount, ProductType FROM dbo.ShoppingCart where Username = '" + Customer.CreateCustomer().userInfo.Username + "'", Database.CreateSingle().Sqlconnection);
+            SqlCommand command = new SqlCommand("SELECT ProductName, Price, Amount, ProductType FROM dbo.ShoppingCart where OrderNo is NULL and Username = '" + Customer.CreateCustomer().userInfo.Username + "'", Database.CreateSingle().Sqlconnection);
             Database.CreateSingle().Sqlconnection.Open();
             SqlDataReader dr = command.ExecuteReader();
 
@@ -94,7 +94,7 @@ namespace OnlineBookStore
         public void PlaceOrder()
         {
 
-            
+
         }
 
         public void CancelOrder()
