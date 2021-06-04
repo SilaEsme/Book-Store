@@ -9,10 +9,17 @@ namespace OnlineBookStore
         private Customer customer = Customer.CreateCustomer();
         private List<ItemToPurchase> list = new List<ItemToPurchase>();
 
+        private static ShoppingCart shoppingCart;
+        public static ShoppingCart CreateShoppingCart()
+        {
+            if (shoppingCart == null)
+                shoppingCart = new ShoppingCart();
+            return shoppingCart;
+        }
         private enum PaymentType
         { cash, CreditCard }
 
-        public ShoppingCart()
+        protected ShoppingCart()
         {
         }
 
@@ -86,6 +93,8 @@ namespace OnlineBookStore
 
         public void PlaceOrder()
         {
+
+            
         }
 
         public void CancelOrder()

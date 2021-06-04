@@ -14,7 +14,7 @@ namespace OnlineBookStore
         private UserControlMagazineDetails userControlMagazineDetails = UserControlMagazineDetails.CreateMagazineDetails();
         UserControlPayment userControlPayment = UserControlPayment.CreateUserControlPayment();
 
-        private ShoppingCart shoppingCart = new ShoppingCart();
+        private ShoppingCart shoppingCart =  ShoppingCart.CreateShoppingCart();
 
         public ShoppingCart ShoppingCart
         {
@@ -69,6 +69,7 @@ namespace OnlineBookStore
             FormMainPage.Instance()._UserControlMyPage.Visible = false;
             FormMainPage.Instance()._UserControlChangeInformations.Visible = false;
             userControlPayment.Visible = true;
+            userControlPayment.CalculateTotal();
 
             FormMainPage.Instance().panelProductDisplay.Controls.Add(userControlPayment);
         }

@@ -19,7 +19,7 @@ namespace OnlineBookStore
         private UserControlChangeInformations userControlChangeInformations;
         private UserControlMyPage userControlMyPage;
         private UserControlPayment userControlPayment;
-
+        private UserControlMyOrders userControlMyOrders;
         public UserControlMyPage _UserControlMyPage
         {
             get => userControlMyPage;
@@ -45,19 +45,20 @@ namespace OnlineBookStore
         {
             InitializeComponent();
             mainPage = this;
-           factory = new ProductFactory();
-         userControlBooks = UserControlBooks.CreateControlBooks();
-        userControlMusicCDs = UserControlMusicCDs.CreateControlCDs();
-       UserControlMagazines = UserControlMagazines.CreateControlMagazines();
-        userControlShoppingCart = UserControlShoppingCart.Instance();
+            factory = new ProductFactory();
+            userControlBooks = UserControlBooks.CreateControlBooks();
+            userControlMusicCDs = UserControlMusicCDs.CreateControlCDs();
+            UserControlMagazines = UserControlMagazines.CreateControlMagazines();
+            userControlShoppingCart = UserControlShoppingCart.Instance();
 
-        userControlProductDetails = UserControlProductDetails.CreateProductDetails();
-       userControlMusicCDDetail = UserControlMusicCDDetail.CreateMusicCDDeatils();
-       userControlMagazineDetails = UserControlMagazineDetails.CreateMagazineDetails();
-        userControlChangeInformations = new UserControlChangeInformations();
-        userControlMyPage = UserControlMyPage.CreateMyPage();
+            userControlProductDetails = UserControlProductDetails.CreateProductDetails();
+            userControlMusicCDDetail = UserControlMusicCDDetail.CreateMusicCDDeatils();
+            userControlMagazineDetails = UserControlMagazineDetails.CreateMagazineDetails();
+            userControlChangeInformations = new UserControlChangeInformations();
+            userControlMyPage = UserControlMyPage.CreateMyPage();
             userControlPayment = UserControlPayment.CreateUserControlPayment();
-    }
+            userControlMyOrders = UserControlMyOrders.CreateUserControlMyORders();
+        }
 
         private void pictureBoxExit_Click(object sender, EventArgs e)
         {
@@ -75,6 +76,8 @@ namespace OnlineBookStore
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
             userControlPayment.Visible = false;
+            userControlMyOrders.Visible = false;
+
             userControlChangeInformations.Visible = false;
             userControlBooks.DeleteBook();
             factory.CreateProduct("Book");
@@ -91,6 +94,8 @@ namespace OnlineBookStore
             userControlProductDetails.Visible = false;
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
+            userControlMyOrders.Visible = false;
+
             userControlPayment.Visible = false;
             userControlMyPage.Visible = false;
             userControlChangeInformations.Visible = false;
@@ -104,12 +109,15 @@ namespace OnlineBookStore
         private void btnMagazines_Click(object sender, EventArgs e)
         {
             UserControlMagazines.Visible = true;
+            UserControlMagazines.BringToFront();
             userControlMusicCDs.Visible = false;
             userControlBooks.Visible = false;
             userControlShoppingCart.Visible = false;
             userControlProductDetails.Visible = false;
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
+            userControlMyOrders.Visible = false;
+
             userControlPayment.Visible = false;
             userControlMyPage.Visible = false;
             userControlChangeInformations.Visible = false;
@@ -130,7 +138,10 @@ namespace OnlineBookStore
             userControlPayment.Visible = false;
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
+            userControlMyOrders.Visible = false;
+
             userControlMyPage.Visible = true;
+            userControlMyPage.BringToFront();
             userControlChangeInformations.Visible = false;
 
             userControlMyPage.SetLabelMyPage();
@@ -148,24 +159,58 @@ namespace OnlineBookStore
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
             userControlChangeInformations.Visible = false;
+            userControlMyOrders.Visible = false;
+
             userControlShoppingCart.Visible = true;
             userControlShoppingCart.BringToFront();
             userControlShoppingCart.ShoppingCart.ListCart();
             this.panelProductDisplay.Controls.Add(userControlShoppingCart);
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void btnSignOut_Click(object sender, EventArgs e)
         {
-            UserControlMagazines.Visible = false;
-            userControlMusicCDs.Visible = false;
+            FormLogin login = new FormLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void FormMainPage_Load(object sender, EventArgs e)
+        {
+            btnBooks_Click(sender,e);
+        }
+
+        private void btnMyOrders_Click(object sender, EventArgs e)
+        {
+
             userControlBooks.Visible = false;
+            userControlMusicCDs.Visible = false;
+            UserControlMagazines.Visible = false;
             userControlShoppingCart.Visible = false;
             userControlProductDetails.Visible = false;
-            userControlPayment.Visible = false;
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
             userControlChangeInformations.Visible = false;
+            userControlMyOrders.Visible = true;
+            userControlMyOrders.DeleteOrders();
+
+            if(userControlMyOrders.CreateOrder()==false)
+            {
+                DialogResult dialog = new DialogResult();
+                dialog= MessageBox.Show("You have not ordered anything yet!", "Fail Order", MessageBoxButtons.OK);
+                if(dialog == DialogResult.OK)
+                {
+                    btnShoppingCart_Click(sender,e);
+                }
+            }
+            else
+            {
+                userControlPayment.Visible = false;
+                userControlMyOrders.BringToFront();
+                this.panelProductDisplay.Controls.Add(userControlMyOrders);
+            }
+           
+
         }
     }
 }

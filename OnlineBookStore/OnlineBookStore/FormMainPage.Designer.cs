@@ -30,7 +30,8 @@ namespace OnlineBookStore
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.btnMyOrders = new System.Windows.Forms.Button();
+            this.btnSignOut = new System.Windows.Forms.Button();
             this.btnMyPage = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnShoppingCart = new System.Windows.Forms.Button();
@@ -50,7 +51,8 @@ namespace OnlineBookStore
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnHome);
+            this.panel3.Controls.Add(this.btnMyOrders);
+            this.panel3.Controls.Add(this.btnSignOut);
             this.panel3.Controls.Add(this.btnMyPage);
             this.panel3.Controls.Add(this.btnBooks);
             this.panel3.Controls.Add(this.btnShoppingCart);
@@ -62,24 +64,43 @@ namespace OnlineBookStore
             this.panel3.Size = new System.Drawing.Size(226, 607);
             this.panel3.TabIndex = 3;
             // 
-            // btnHome
+            // btnMyOrders
             // 
-            this.btnHome.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnHome.Image = global::OnlineBookStore.Properties.Resources.icons8_home_page_50;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHome.Location = new System.Drawing.Point(9, 12);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(204, 67);
-            this.btnHome.TabIndex = 8;
-            this.btnHome.Text = "Home";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnMyOrders.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnMyOrders.FlatAppearance.BorderSize = 0;
+            this.btnMyOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyOrders.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyOrders.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnMyOrders.Image = global::OnlineBookStore.Properties.Resources.icons8_girl_with_glasses_shopping_cart_50;
+            this.btnMyOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMyOrders.Location = new System.Drawing.Point(9, 439);
+            this.btnMyOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMyOrders.Name = "btnMyOrders";
+            this.btnMyOrders.Size = new System.Drawing.Size(204, 67);
+            this.btnMyOrders.TabIndex = 10;
+            this.btnMyOrders.Text = "MyOrders";
+            this.btnMyOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyOrders.UseVisualStyleBackColor = false;
+            this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnSignOut.Image = global::OnlineBookStore.Properties.Resources.icons8_home_page_50;
+            this.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSignOut.Location = new System.Drawing.Point(9, 522);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(204, 67);
+            this.btnSignOut.TabIndex = 9;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // btnMyPage
             // 
@@ -90,7 +111,7 @@ namespace OnlineBookStore
             this.btnMyPage.ForeColor = System.Drawing.SystemColors.Info;
             this.btnMyPage.Image = global::OnlineBookStore.Properties.Resources.icons8_female_profile_50;
             this.btnMyPage.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMyPage.Location = new System.Drawing.Point(9, 537);
+            this.btnMyPage.Location = new System.Drawing.Point(9, 24);
             this.btnMyPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMyPage.Name = "btnMyPage";
             this.btnMyPage.Size = new System.Drawing.Size(204, 67);
@@ -109,7 +130,7 @@ namespace OnlineBookStore
             this.btnBooks.ForeColor = System.Drawing.SystemColors.Info;
             this.btnBooks.Image = global::OnlineBookStore.Properties.Resources.icons8_book_shelf_50;
             this.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBooks.Location = new System.Drawing.Point(9, 117);
+            this.btnBooks.Location = new System.Drawing.Point(9, 107);
             this.btnBooks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBooks.Name = "btnBooks";
             this.btnBooks.Size = new System.Drawing.Size(204, 67);
@@ -128,7 +149,7 @@ namespace OnlineBookStore
             this.btnShoppingCart.ForeColor = System.Drawing.SystemColors.Info;
             this.btnShoppingCart.Image = global::OnlineBookStore.Properties.Resources.icons8_girl_with_glasses_shopping_cart_50;
             this.btnShoppingCart.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnShoppingCart.Location = new System.Drawing.Point(9, 432);
+            this.btnShoppingCart.Location = new System.Drawing.Point(9, 356);
             this.btnShoppingCart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShoppingCart.Name = "btnShoppingCart";
             this.btnShoppingCart.Size = new System.Drawing.Size(204, 67);
@@ -147,7 +168,7 @@ namespace OnlineBookStore
             this.btnMusicCDs.ForeColor = System.Drawing.SystemColors.Info;
             this.btnMusicCDs.Image = global::OnlineBookStore.Properties.Resources.icons8_music_50;
             this.btnMusicCDs.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMusicCDs.Location = new System.Drawing.Point(9, 222);
+            this.btnMusicCDs.Location = new System.Drawing.Point(9, 190);
             this.btnMusicCDs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMusicCDs.Name = "btnMusicCDs";
             this.btnMusicCDs.Size = new System.Drawing.Size(204, 67);
@@ -166,7 +187,7 @@ namespace OnlineBookStore
             this.btnMagazines.ForeColor = System.Drawing.SystemColors.Info;
             this.btnMagazines.Image = global::OnlineBookStore.Properties.Resources.icons8_comics_magazine_50;
             this.btnMagazines.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMagazines.Location = new System.Drawing.Point(9, 327);
+            this.btnMagazines.Location = new System.Drawing.Point(9, 273);
             this.btnMagazines.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMagazines.Name = "btnMagazines";
             this.btnMagazines.Size = new System.Drawing.Size(204, 67);
@@ -254,7 +275,9 @@ namespace OnlineBookStore
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMainPage";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainPage";
+            this.Load += new System.EventHandler(this.FormMainPage_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Icon)).EndInit();
@@ -274,9 +297,10 @@ namespace OnlineBookStore
         private System.Windows.Forms.Button btnMyPage;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Panel panelProductDisplay;
-        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label MagicTitle;
         private System.Windows.Forms.Label lblTitlebook;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnMyOrders;
     }
 }

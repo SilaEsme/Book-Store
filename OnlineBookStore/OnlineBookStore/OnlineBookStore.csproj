@@ -67,12 +67,6 @@
     <Compile Include="FormMainPage.Designer.cs">
       <DependentUpon>FormMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormShoppingCart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormShoppingCart.Designer.cs">
-      <DependentUpon>FormShoppingCart.cs</DependentUpon>
-    </Compile>
     <Compile Include="HashCriptology.cs" />
     <Compile Include="ItemToPurchase.cs" />
     <Compile Include="Magazine.cs" />
@@ -87,6 +81,24 @@
     </Compile>
     <Compile Include="UserControlBook.Designer.cs">
       <DependentUpon>UserControlBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlMy_OrderList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMy_OrderList.Designer.cs">
+      <DependentUpon>UserControlMy_OrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlMyOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMyOrder.Designer.cs">
+      <DependentUpon>UserControlMyOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlMyOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlMyOrders.Designer.cs">
+      <DependentUpon>UserControlMyOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlPayment.cs">
       <SubType>UserControl</SubType>
@@ -173,9 +185,6 @@
     <EmbeddedResource Include="FormMainPage.resx">
       <DependentUpon>FormMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormShoppingCart.resx">
-      <DependentUpon>FormShoppingCart.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -191,6 +200,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlBook.resx">
       <DependentUpon>UserControlBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMy_OrderList.resx">
+      <DependentUpon>UserControlMy_OrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMyOrder.resx">
+      <DependentUpon>UserControlMyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMyOrders.resx">
+      <DependentUpon>UserControlMyOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPayment.resx">
       <DependentUpon>UserControlPayment.cs</DependentUpon>

@@ -10,6 +10,7 @@
         private string surname;
         private UserInfo UserInfo = new UserInfo();
 
+
         public static Customer CreateCustomer()
         {
             if (customer == null)

@@ -83,6 +83,7 @@ namespace OnlineBookStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.Controls.Add(this.btnReadMore);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.pictureBoxBook);
