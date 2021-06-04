@@ -27,5 +27,6 @@ namespace OnlineBookStore
             lblTotalAmount.Text = amount;
             lblTotalPrice.Text = (Double.Parse(lblPrice.Text.Replace('.', ',')) * Double.Parse(lblTotalAmount.Text)).ToString();
         }
+
     }
 }

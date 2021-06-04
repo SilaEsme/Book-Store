@@ -35,16 +35,18 @@ namespace OnlineBookStore
             // 
             // flowLayoutPanelOrders
             // 
+            this.flowLayoutPanelOrders.AutoScroll = true;
             this.flowLayoutPanelOrders.Location = new System.Drawing.Point(13, 19);
             this.flowLayoutPanelOrders.Name = "flowLayoutPanelOrders";
-            this.flowLayoutPanelOrders.Size = new System.Drawing.Size(539, 524);
+            this.flowLayoutPanelOrders.Size = new System.Drawing.Size(519, 524);
             this.flowLayoutPanelOrders.TabIndex = 0;
             // 
             // flowLayoutPanelOrderDetails
             // 
-            this.flowLayoutPanelOrderDetails.Location = new System.Drawing.Point(558, 19);
+            this.flowLayoutPanelOrderDetails.AutoScroll = true;
+            this.flowLayoutPanelOrderDetails.Location = new System.Drawing.Point(538, 19);
             this.flowLayoutPanelOrderDetails.Name = "flowLayoutPanelOrderDetails";
-            this.flowLayoutPanelOrderDetails.Size = new System.Drawing.Size(539, 524);
+            this.flowLayoutPanelOrderDetails.Size = new System.Drawing.Size(559, 524);
             this.flowLayoutPanelOrderDetails.TabIndex = 1;
             // 
             // UserControlMyOrders

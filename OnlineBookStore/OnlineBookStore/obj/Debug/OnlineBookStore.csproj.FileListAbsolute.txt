@@ -92,7 +92,6 @@ C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\bin\Debug\Onl
 C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csprojAssemblyReference.cache
 C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormLogin.resources
 C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormMainPage.resources
-C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormShoppingCart.resources
 C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.Properties.Resources.resources
 C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormSignUp.resources
 C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlBook.resources
@@ -266,3 +265,6 @@ C:\Users\Zeynep\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\Onl
 C:\Users\Zeynep\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.CoreCompileInputs.cache
 C:\Users\Zeynep\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.exe
 C:\Users\Zeynep\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.pdb
+C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMy_OrderList.resources
+C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyOrder.resources
+C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyOrders.resources
