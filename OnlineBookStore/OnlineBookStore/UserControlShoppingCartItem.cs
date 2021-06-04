@@ -22,8 +22,7 @@ namespace OnlineBookStore
             lblPrice.Text = price;
             lblTotalAmount.Text = amount;
 
-            lblTotalPrice.Text = (Double.Parse(price) * Int32.Parse(amount)).ToString();
-            lblTotalPrice.Text = lblTotalPrice.Text.Replace(',', '.');
+            lblTotalPrice.Text= (Double.Parse(price.Replace('.',',')) * Int32.Parse(amount)).ToString();
 
             string producttype = "";
             Database database = Database.CreateSingle();
@@ -132,6 +131,9 @@ namespace OnlineBookStore
             TempPrice = Double.Parse(userControlShoppingCart.GetLabelPrice());
             TempPrice += Double.Parse(this.lblPrice.Text.Replace('.', ','));
             userControlShoppingCart.SetLabelPrice(TempPrice.ToString());
+
+            lblTotalPrice.Text = (Double.Parse(lblTotalAmount.Text) * Double.Parse(lblPrice.Text.Replace('.', ','))).ToString();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -181,6 +183,9 @@ namespace OnlineBookStore
                 TempPrice -= Double.Parse(this.lblPrice.Text.Replace('.', ','));
                 userControlShoppingCart.SetLabelPrice(TempPrice.ToString());
                 command.Parameters.AddWithValue("@amount", amount.ToString());
+
+                lblTotalPrice.Text = (Double.Parse(lblTotalAmount.Text) * Double.Parse(lblPrice.Text.Replace('.', ','))).ToString();
+
 
                 Database.CreateSingle().Sqlconnection.Open();
                 command.ExecuteNonQuery();

@@ -8,7 +8,6 @@ namespace OnlineBookStore
     {
         private Customer customer = Customer.CreateCustomer();
         private List<ItemToPurchase> list = new List<ItemToPurchase>();
-       
 
         private enum PaymentType
         { cash, CreditCard }
@@ -43,9 +42,8 @@ namespace OnlineBookStore
 
         public void ListCart()
         {
-            UserControlShoppingCart userControlShoppingCart = UserControlShoppingCart.Instance();
-            List.Clear();
-            userControlShoppingCart.flowLayoutPanelProducts.Controls.Clear();
+            this.List.Clear();
+            UserControlShoppingCart.Instance().flowLayoutPanelProducts.Controls.Clear();
             GetList();
             double totalprice = 0;
             int totalamount = 0;
@@ -53,13 +51,14 @@ namespace OnlineBookStore
             {
                 UserControlShoppingCartItem cartItem = new UserControlShoppingCartItem();
                 cartItem.SetLabel(item.Product.ProductName, item.Product.ProductPrice, item.Quantity);
-                userControlShoppingCart.flowLayoutPanelProducts.Controls.Add(cartItem);
+                UserControlShoppingCart.Instance().flowLayoutPanelProducts.Controls.Add(cartItem);
+                item.Product.ProductPrice = item.Product.ProductPrice.Replace('.', ',');
 
                 totalprice += Double.Parse(item.Product.ProductPrice) * Int32.Parse(item.Quantity);
                 totalamount += Int32.Parse(item.Quantity);
             }
-            userControlShoppingCart.SetLabelPrice(totalprice.ToString().Replace(',', '.'));
-            userControlShoppingCart.SetLabelAmount(totalamount.ToString());
+            UserControlShoppingCart.Instance().SetLabelPrice(totalprice.ToString().Replace(',', '.'));
+            UserControlShoppingCart.Instance().SetLabelAmount(totalamount.ToString());
         }
 
         public void AddProduct(ItemToPurchase item)

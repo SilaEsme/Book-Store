@@ -142,3 +142,4 @@ C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.CoreCompileInputs.cache
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.exe
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.pdb
+C:\Users\lenovo\Desktop\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlPayment.resources

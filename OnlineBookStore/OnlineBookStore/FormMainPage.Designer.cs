@@ -30,7 +30,7 @@ namespace OnlineBookStore
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.btnMyPage = new System.Windows.Forms.Button();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnShoppingCart = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@ namespace OnlineBookStore
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnHome);
             this.panel3.Controls.Add(this.btnMyPage);
             this.panel3.Controls.Add(this.btnBooks);
             this.panel3.Controls.Add(this.btnShoppingCart);
@@ -62,23 +62,24 @@ namespace OnlineBookStore
             this.panel3.Size = new System.Drawing.Size(226, 607);
             this.panel3.TabIndex = 3;
             // 
-            // button1
+            // btnHome
             // 
-            this.button1.BackColor = System.Drawing.Color.CadetBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Image = global::OnlineBookStore.Properties.Resources.icons8_home_page_50;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(9, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 67);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Home";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHome.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnHome.Image = global::OnlineBookStore.Properties.Resources.icons8_home_page_50;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHome.Location = new System.Drawing.Point(9, 12);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(204, 67);
+            this.btnHome.TabIndex = 8;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnMyPage
             // 
@@ -273,7 +274,7 @@ namespace OnlineBookStore
         private System.Windows.Forms.Button btnMyPage;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Panel panelProductDisplay;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label MagicTitle;
         private System.Windows.Forms.Label lblTitlebook;
         private System.Windows.Forms.Panel panel1;

@@ -18,7 +18,7 @@ namespace OnlineBookStore
         private UserControlMagazineDetails userControlMagazineDetails;
         private UserControlChangeInformations userControlChangeInformations;
         private UserControlMyPage userControlMyPage;
-
+        private UserControlPayment userControlPayment;
 
         public UserControlMyPage _UserControlMyPage
         {
@@ -56,7 +56,7 @@ namespace OnlineBookStore
        userControlMagazineDetails = UserControlMagazineDetails.CreateMagazineDetails();
         userControlChangeInformations = new UserControlChangeInformations();
         userControlMyPage = UserControlMyPage.CreateMyPage();
-
+            userControlPayment = UserControlPayment.CreateUserControlPayment();
     }
 
         private void pictureBoxExit_Click(object sender, EventArgs e)
@@ -74,6 +74,7 @@ namespace OnlineBookStore
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
+            userControlPayment.Visible = false;
             userControlChangeInformations.Visible = false;
             userControlBooks.DeleteBook();
             factory.CreateProduct("Book");
@@ -90,6 +91,7 @@ namespace OnlineBookStore
             userControlProductDetails.Visible = false;
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
+            userControlPayment.Visible = false;
             userControlMyPage.Visible = false;
             userControlChangeInformations.Visible = false;
 
@@ -108,6 +110,7 @@ namespace OnlineBookStore
             userControlProductDetails.Visible = false;
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
+            userControlPayment.Visible = false;
             userControlMyPage.Visible = false;
             userControlChangeInformations.Visible = false;
 
@@ -124,6 +127,7 @@ namespace OnlineBookStore
             userControlBooks.Visible = false;
             userControlShoppingCart.Visible = false;
             userControlProductDetails.Visible = false;
+            userControlPayment.Visible = false;
             userControlMusicCDDetail.Visible = false;
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = true;
@@ -140,13 +144,28 @@ namespace OnlineBookStore
             userControlBooks.Visible = false;
             userControlProductDetails.Visible = false;
             userControlMusicCDDetail.Visible = false;
+            userControlPayment.Visible = false;
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
             userControlChangeInformations.Visible = false;
             userControlShoppingCart.Visible = true;
-
+            userControlShoppingCart.BringToFront();
             userControlShoppingCart.ShoppingCart.ListCart();
             this.panelProductDisplay.Controls.Add(userControlShoppingCart);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            UserControlMagazines.Visible = false;
+            userControlMusicCDs.Visible = false;
+            userControlBooks.Visible = false;
+            userControlShoppingCart.Visible = false;
+            userControlProductDetails.Visible = false;
+            userControlPayment.Visible = false;
+            userControlMusicCDDetail.Visible = false;
+            userControlMagazineDetails.Visible = false;
+            userControlMyPage.Visible = false;
+            userControlChangeInformations.Visible = false;
         }
     }
 }
