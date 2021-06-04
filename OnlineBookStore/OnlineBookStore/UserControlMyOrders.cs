@@ -13,6 +13,11 @@ namespace OnlineBookStore
 {
     public partial class UserControlMyOrders : UserControl
     {
+        private Order order;
+        public Order Order
+        {
+            get => order;
+        }
         private static UserControlMyOrders userControlMyOrders;
         public static UserControlMyOrders CreateUserControlMyORders()
         {
@@ -33,8 +38,6 @@ namespace OnlineBookStore
 
             while (dr.Read())
             {
-                Book book = new Book();
-
                 UserControlMyOrder userControlMyOrder = new UserControlMyOrder();
                 userControlMyOrder.SetLabelOrders(dr.GetString(0), dr.GetString(2), dr.GetString(1));
                 flowLayoutPanelOrderDetails.Controls.Add(userControlMyOrder);

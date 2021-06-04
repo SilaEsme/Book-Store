@@ -120,7 +120,6 @@ C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\bin
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.AssemblyReference.cache
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormLogin.resources
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormMainPage.resources
-C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormShoppingCart.resources
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.Properties.Resources.resources
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormSignUp.resources
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlBook.resources
@@ -200,3 +199,6 @@ C:\Users\lenovo\Desktop\OnlineBookStore1dENEME\OnlineBookStore\obj\Debug\OnlineB
 C:\Users\lenovo\Desktop\OnlineBookStore1dENEME\OnlineBookStore\obj\Debug\OnlineBookStore.exe
 C:\Users\lenovo\Desktop\OnlineBookStore1dENEME\OnlineBookStore\obj\Debug\OnlineBookStore.pdb
 C:\Users\lenovo\Desktop\OnlineBookStore1dENEME\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMy_OrderList.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMy_OrderList.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyOrder.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyOrders.resources

@@ -71,6 +71,7 @@
     <Compile Include="ItemToPurchase.cs" />
     <Compile Include="Magazine.cs" />
     <Compile Include="MusicCD.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductFactory.cs" />
     <Compile Include="Program.cs" />

@@ -13,6 +13,12 @@ namespace OnlineBookStore
 {
     public partial class UserControlMy_OrderList : UserControl
     {
+        Order order;
+        public Order Order
+        {
+            set => order = value;
+        }
+
         UserControlMyOrder userControlMyOrder = new UserControlMyOrder();
         UserControlMyOrders userControlMyOrders = new UserControlMyOrders();
         public  UserControlMy_OrderList()

@@ -65,6 +65,11 @@ namespace OnlineBookStore
                 DateTime date = DateTime.Now;
                 Random rand = new Random();
                 int OrderNumber = rand.Next(10000, 999999);
+                //CLASS - name price quantity total
+                Order order = new Order(OrderNumber.ToString(),date.ToString());
+
+
+                //SQL
                 SqlCommand command = new SqlCommand("insert into orderlist (OrderNumber,OrderTime,OrderTotalPrice,username) values (@orderno,@ordertime,@orderTotalPrice,@username)", Database.CreateSingle().Sqlconnection);
 
                 command.Parameters.AddWithValue("@username", Customer.CreateCustomer().userInfo.Username);
