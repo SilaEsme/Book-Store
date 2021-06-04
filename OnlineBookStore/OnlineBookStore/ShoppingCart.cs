@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace OnlineBookStore
 {
@@ -77,6 +78,21 @@ namespace OnlineBookStore
         {
             list.Remove(item);
         }
+        public void ClearCart(int no)
+        {
+            UserControlShoppingCart userControlShoppingCart = UserControlShoppingCart.Instance();
+            List.Clear();
+            userControlShoppingCart.flowLayoutPanelProducts.Controls.Clear();
+            userControlShoppingCart.SetLabelAmount("0");
+            userControlShoppingCart.SetLabelPrice("0");
+
+            SqlCommand command = new SqlCommand("delete FROM dbo.ShoppingCart where Username = @username and OrderNo = @no", Database.CreateSingle().Sqlconnection);
+            command.Parameters.AddWithValue("@username", Customer.CreateCustomer().userInfo.Username);
+            command.Parameters.AddWithValue("@no", no);
+            Database.CreateSingle().Sqlconnection.Open();
+            command.ExecuteNonQuery();
+            Database.CreateSingle().Sqlconnection.Close();
+        }
         public void ClearCart()
         {
             UserControlShoppingCart userControlShoppingCart = UserControlShoppingCart.Instance();
@@ -85,28 +101,36 @@ namespace OnlineBookStore
             userControlShoppingCart.SetLabelAmount("0");
             userControlShoppingCart.SetLabelPrice("0");
 
-            SqlCommand command = new SqlCommand("delete from shoppingcart FROM dbo.ShoppingCart where Username = '" + Customer.CreateCustomer().userInfo.Username + "'", Database.CreateSingle().Sqlconnection);
+            SqlCommand command = new SqlCommand("delete FROM dbo.ShoppingCart where Username = @username", Database.CreateSingle().Sqlconnection);
+            command.Parameters.AddWithValue("@username", Customer.CreateCustomer().userInfo.Username);
             Database.CreateSingle().Sqlconnection.Open();
             command.ExecuteNonQuery();
             Database.CreateSingle().Sqlconnection.Close();
         }
 
-        public void PlaceOrder()
+        public void PlaceOrder(string invoice)
         {
-
-
+            MessageBox.Show("Your Order has been created! " + invoice, "New Order", MessageBoxButtons.OK);
         }
 
-        public void CancelOrder()
+        public void CancelOrder(int no)
         {
+            ClearCart(no);
+            SqlCommand command = new SqlCommand("DELETE from OrderList where OrderNumber = @no", Database.CreateSingle().Sqlconnection);
+            command.Parameters.AddWithValue("@no", no);
+            Database.CreateSingle().Sqlconnection.Open();
+            command.ExecuteNonQuery();
+            Database.CreateSingle().Sqlconnection.Close();
         }
 
-        public void SendInvoiceBySMS()
+        public string SendInvoiceBySMS()
         {
+            return "Your invoice will be sent via SMS.";
         }
 
-        public void SendInvoiceByEMail()
+        public string SendInvoiceByEMail()
         {
+            return "Your invoice will be sent via E-Mail.";
         }
     }
 }

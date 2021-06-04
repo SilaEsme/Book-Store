@@ -48,21 +48,20 @@ namespace OnlineBookStore
 
             Database.CreateSingle().Sqlconnection.Open();
             SqlDataReader dr = command.ExecuteReader();
-            if (!dr.Read())
+            if(!dr.Read())
             {
                 Database.CreateSingle().Sqlconnection.Close();
                 return false;
             }
-
-
-            while (dr.Read())
+            else
             {
-                UserControlMy_OrderList userControlMy_OrderList = new UserControlMy_OrderList();
-
-                userControlMy_OrderList.SetLabelOrder(dr.GetString(0), dr.GetString(1), dr.GetString(2));
-                flowLayoutPanelOrders.Controls.Add(userControlMy_OrderList);
+                while (dr.Read())
+                {
+                    UserControlMy_OrderList userControlMy_OrderList = new UserControlMy_OrderList();
+                    userControlMy_OrderList.SetLabelOrder(dr.GetString(0), dr.GetString(1), dr.GetString(2));
+                    flowLayoutPanelOrders.Controls.Add(userControlMy_OrderList);
+                }
             }
-
             Database.CreateSingle().Sqlconnection.Close();
             return true;
         }

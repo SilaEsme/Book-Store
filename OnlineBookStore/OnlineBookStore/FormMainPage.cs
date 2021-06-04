@@ -191,7 +191,8 @@ namespace OnlineBookStore
             userControlMagazineDetails.Visible = false;
             userControlMyPage.Visible = false;
             userControlChangeInformations.Visible = false;
-            userControlMyOrders.Visible = true;
+            userControlPayment.Visible = false;
+
             userControlMyOrders.DeleteOrders();
 
             if(userControlMyOrders.CreateOrder()==false)
@@ -205,7 +206,7 @@ namespace OnlineBookStore
             }
             else
             {
-                userControlPayment.Visible = false;
+                userControlMyOrders.Visible = true;
                 userControlMyOrders.BringToFront();
                 this.panelProductDisplay.Controls.Add(userControlMyOrders);
             }

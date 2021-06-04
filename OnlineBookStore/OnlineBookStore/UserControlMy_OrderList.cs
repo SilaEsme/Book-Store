@@ -32,5 +32,11 @@ namespace OnlineBookStore
             }
             userControlMyOrders.CreateMyOrders(lblOrderNo.Text);
         }
+
+        private void btnCancelOrder_Click(object sender, EventArgs e)
+        {
+            ShoppingCart.CreateShoppingCart().CancelOrder(int.Parse(lblOrderNo.Text));
+            userControlMyOrders.flowLayoutPanelOrders.Controls.Remove(this);
+        }
     }
 }

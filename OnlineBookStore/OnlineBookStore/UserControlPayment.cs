@@ -58,7 +58,7 @@ namespace OnlineBookStore
 
             if (radioButtonYutici.Checked == false && radioButtonAras.Checked == false)
             {
-                MessageBox.Show("Please Select a Cargo Company!", "Fail Order", MessageBoxButtons.OK);
+                MessageBox.Show("Please Select a Cargo Company or Invoice Option!", "Fail Order", MessageBoxButtons.OK);
             }
             else
             {
@@ -66,7 +66,7 @@ namespace OnlineBookStore
                 Random rand = new Random();
                 int OrderNumber = rand.Next(10000, 999999);
 
-                //SQL ORDERLİST
+                //---------------------------------SQL ORDERLİST
                 SqlCommand command = new SqlCommand("insert into orderlist (OrderNumber,OrderTime,OrderTotalPrice,username) values (@orderno,@ordertime,@orderTotalPrice,@username)", Database.CreateSingle().Sqlconnection);
 
                 command.Parameters.AddWithValue("@username", Customer.CreateCustomer().userInfo.Username);
@@ -78,7 +78,7 @@ namespace OnlineBookStore
                 command.ExecuteNonQuery();
                 Database.CreateSingle().Sqlconnection.Close();
 
-                //SQL SHOPPINGCART
+                //--------------------------------SQL SHOPPINGCART
                 SqlCommand command2 = new SqlCommand("UPDATE shoppingcart SET OrderNo = @no WHERE username=@username and OrderNo is NULL", Database.CreateSingle().Sqlconnection);
 
                 command2.Parameters.AddWithValue("@no", OrderNumber.ToString());
@@ -88,8 +88,18 @@ namespace OnlineBookStore
                 command2.ExecuteNonQuery();
                 Database.CreateSingle().Sqlconnection.Close();
 
-                MessageBox.Show("Your Order has been Created!", "New Order", MessageBoxButtons.OK);
-                //ShoppingCart.ClearCart();
+                //----------------------------------Shopping Cart İşlemleri-----------------------------------//
+                string invoiceMessage = "";
+                if (radioButtonSMS.Checked)
+                {
+                    invoiceMessage = ShoppingCart.SendInvoiceBySMS();
+                }
+                else if (radioButtonMail.Checked)
+                {
+                    invoiceMessage = ShoppingCart.SendInvoiceByEMail();
+                }
+                ShoppingCart.PlaceOrder(invoiceMessage);
+
             }
 
         }
