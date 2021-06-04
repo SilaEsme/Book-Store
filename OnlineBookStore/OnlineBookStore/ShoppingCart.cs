@@ -88,7 +88,7 @@ namespace OnlineBookStore
 
             SqlCommand command = new SqlCommand("delete FROM dbo.ShoppingCart where Username = @username and OrderNo = @no", Database.CreateSingle().Sqlconnection);
             command.Parameters.AddWithValue("@username", Customer.CreateCustomer().userInfo.Username);
-            command.Parameters.AddWithValue("@no", no);
+            command.Parameters.AddWithValue("@no", no.ToString());
             Database.CreateSingle().Sqlconnection.Open();
             command.ExecuteNonQuery();
             Database.CreateSingle().Sqlconnection.Close();

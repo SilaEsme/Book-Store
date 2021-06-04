@@ -88,7 +88,7 @@ namespace OnlineBookStore
             // 
             this.lblInfoUpdate.AutoSize = true;
             this.lblInfoUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblInfoUpdate.Location = new System.Drawing.Point(713, 504);
+            this.lblInfoUpdate.Location = new System.Drawing.Point(594, 444);
             this.lblInfoUpdate.Name = "lblInfoUpdate";
             this.lblInfoUpdate.Size = new System.Drawing.Size(0, 17);
             this.lblInfoUpdate.TabIndex = 33;
