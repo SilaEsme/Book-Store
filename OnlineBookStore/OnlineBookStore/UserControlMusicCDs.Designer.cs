@@ -37,7 +37,7 @@ namespace OnlineBookStore
             this.flowLayoutPanel_productDisplay.AutoScroll = true;
             this.flowLayoutPanel_productDisplay.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel_productDisplay.Name = "flowLayoutPanel_productDisplay";
-            this.flowLayoutPanel_productDisplay.Size = new System.Drawing.Size(1115, 631);
+            this.flowLayoutPanel_productDisplay.Size = new System.Drawing.Size(1108, 564);
             this.flowLayoutPanel_productDisplay.TabIndex = 0;
             // 
             // UserControlMusicCDs
@@ -46,7 +46,7 @@ namespace OnlineBookStore
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel_productDisplay);
             this.Name = "UserControlMusicCDs";
-            this.Size = new System.Drawing.Size(1121, 637);
+            this.Size = new System.Drawing.Size(1114, 572);
             this.ResumeLayout(false);
 
         }

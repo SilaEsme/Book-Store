@@ -17,7 +17,6 @@ C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\bin\Debug\OnlineBookStor
 C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csprojAssemblyReference.cache
 C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormLogin.resources
 C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormMainPage.resources
-C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormShoppingCart.resources
 C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.Properties.Resources.resources
 C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormSignUp.resources
 C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.GenerateResource.cache
@@ -202,3 +201,7 @@ C:\Users\lenovo\Desktop\OnlineBookStore1dENEME\OnlineBookStore\obj\Debug\OnlineB
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMy_OrderList.resources
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyOrder.resources
 C:\Users\silae\Desktop\Projects\OOP II\Final\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyOrders.resources
+C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMy_OrderList.resources
+C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyOrder.resources
+C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyOrders.resources
+C:\Users\Zeynep\Desktop\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlPayment.resources

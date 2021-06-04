@@ -45,10 +45,10 @@ namespace OnlineBookStore
             temp2 = Double.Parse(lblTotalProduct.Text) + Double.Parse(lblCargo.Text);
             lblFinalTotal.Text = temp2.ToString();
 
-            lblTwo.Text = (Double.Parse(lblFinalTotal.Text) /2).ToString();
-            lblFour.Text = (Double.Parse(lblFinalTotal.Text) /4).ToString();
-            lblFive.Text = (Double.Parse(lblFinalTotal.Text) /5).ToString();
-            lblSix.Text = (Double.Parse(lblFinalTotal.Text) /6).ToString();
+            lblTwo.Text = Math.Round ((Double.Parse(lblFinalTotal.Text) /2), 2).ToString();
+            lblFour.Text = Math.Round((Double.Parse(lblFinalTotal.Text) /4), 2).ToString();
+            lblFive.Text = Math.Round((Double.Parse(lblFinalTotal.Text) /5), 2).ToString();
+            lblSix.Text = Math.Round((Double.Parse(lblFinalTotal.Text) /6), 2).ToString();
 
         }
        
@@ -98,6 +98,7 @@ namespace OnlineBookStore
             lblCargo.Text = "8,50";
             CalculateTotal();
         }
+
 
         private void tabControlCredit_SelectedIndexChanged(object sender, EventArgs e)
         {

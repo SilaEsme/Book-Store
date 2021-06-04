@@ -23,7 +23,7 @@ namespace OnlineBookStore
             txtemail.Text = customer.Email;
             txtname.Text = customer.Name;
             txtsurname.Text = customer.Surname;
-            txtusername.Text = customer.userInfo.Username;
+            //txtusername.Text = customer.userInfo.Username;
             string imagename = "";
             var dirs = Directory.GetFiles(@"Profile Images", "*.*").Where(s => s.EndsWith(".png") || s.EndsWith(".jpg") || s.EndsWith(".jpeg"));
             SqlCommand command = new SqlCommand("SELECT ImagePath FROM dbo.Customer WHERE username = @username", Database.CreateSingle().Sqlconnection);
@@ -46,12 +46,7 @@ namespace OnlineBookStore
             }
         }
 
-        public Byte[] BytesOfImage
-        {
-            get { return _bytesOfImage; }
-            set { _bytesOfImage = value; }
-        }
-
+       
         private void btnUpdateImage_Click(object sender, System.EventArgs e)
         {
             //save code

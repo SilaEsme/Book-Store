@@ -71,6 +71,7 @@ namespace OnlineBookStore
             this.txtConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtConfirmPassword.Location = new System.Drawing.Point(600, 270);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(350, 27);
             this.txtConfirmPassword.TabIndex = 25;
             this.txtConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -82,6 +83,7 @@ namespace OnlineBookStore
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPassword.Location = new System.Drawing.Point(600, 204);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(350, 27);
             this.txtPassword.TabIndex = 24;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

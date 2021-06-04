@@ -192,5 +192,42 @@ namespace OnlineBookStore
                 Database.CreateSingle().Sqlconnection.Close();
             }
         }
+
+      
+
+        private void lblTL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPriceH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNameH_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

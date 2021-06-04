@@ -56,7 +56,7 @@ namespace OnlineBookStore
             }
         }
 
-        private void btn_AddtoCart_Click(object sender, System.EventArgs e)
+        private void btn_AddtoCart_Click(object sender, EventArgs e)
         {
             Database.CreateSingle().Sqlconnection.Open();
 

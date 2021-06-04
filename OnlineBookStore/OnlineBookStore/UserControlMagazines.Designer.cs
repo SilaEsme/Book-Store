@@ -37,7 +37,7 @@ namespace OnlineBookStore
             this.flowLayoutPanelProductDisplay.AutoScroll = true;
             this.flowLayoutPanelProductDisplay.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanelProductDisplay.Name = "flowLayoutPanelProductDisplay";
-            this.flowLayoutPanelProductDisplay.Size = new System.Drawing.Size(1148, 616);
+            this.flowLayoutPanelProductDisplay.Size = new System.Drawing.Size(1108, 564);
             this.flowLayoutPanelProductDisplay.TabIndex = 0;
             // 
             // UserControlMagazines
@@ -46,7 +46,7 @@ namespace OnlineBookStore
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanelProductDisplay);
             this.Name = "UserControlMagazines";
-            this.Size = new System.Drawing.Size(1155, 654);
+            this.Size = new System.Drawing.Size(1117, 572);
             this.ResumeLayout(false);
 
         }
