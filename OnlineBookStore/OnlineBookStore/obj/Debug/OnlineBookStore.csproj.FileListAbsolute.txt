@@ -63,7 +63,6 @@ C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBo
 C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.AssemblyReference.cache
 C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormLogin.resources
 C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormMainPage.resources
-C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormShoppingCart.resources
 C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.Properties.Resources.resources
 C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.FormSignUp.resources
 C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlBook.resources
@@ -234,3 +233,7 @@ C:\Users\silae\Desktop\ZEYNEP\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.G
 C:\Users\silae\Desktop\ZEYNEP\OnlineBookStore\obj\Debug\OnlineBookStore.csproj.CoreCompileInputs.cache
 C:\Users\silae\Desktop\ZEYNEP\OnlineBookStore\obj\Debug\OnlineBookStore.exe
 C:\Users\silae\Desktop\ZEYNEP\OnlineBookStore\obj\Debug\OnlineBookStore.pdb
+C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMy_OrderList.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyOrder.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlMyOrders.resources
+C:\Users\silae\Desktop\Projects\OOP II\Final\Book-Store\OnlineBookStore\OnlineBookStore\obj\Debug\OnlineBookStore.UserControlPayment.resources
